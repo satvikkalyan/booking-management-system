@@ -1,0 +1,67 @@
+.rClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.rItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px;
+}
+
+.rTitle {
+  font-weight: 500;
+}
+
+.rDesc {
+  font-weight: 300;
+}
+
+.rMax {
+  font-size: 12px;
+}
+
+.rPrice {
+  font-weight: 500;
+}
+
+.rSelectRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  font-size: 18px;
+  color: gray;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  padding: "20px";
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+.div-scroll{
+  height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+
+}
+.button-reserve-div{
+  margin-top: 25px;
+}

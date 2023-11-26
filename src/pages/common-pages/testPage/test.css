@@ -1,0 +1,29 @@
+.scroll-bg{
+    background: palegoldenrod;
+    width: 400px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.scroll-div{
+    width: 100%;
+    background-color: aqua;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+
+}
+
+.scroll-object{
+    color: wheat;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+.div-c {
+    align-items: "center";
+    height: 100vh;
+    width: 100vh;
+}

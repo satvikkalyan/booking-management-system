@@ -1,0 +1,21 @@
+table, th, td {
+  height: 50px;  
+}
+.qr-code{
+  width: 45%;
+  text-align: center;
+}
+td {
+  text-align: left;
+}
+.td-label{
+  font-weight: bolder 
+}
+
+.td-center{
+  text-align: center;
+}
+
+.td-middle{
+  padding-left: 10%;
+}

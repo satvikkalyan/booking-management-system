@@ -1,0 +1,19 @@
+.div-img {
+    outline: 2px dashed blue;
+    height: 100%;
+    width: 100%;
+}
+
+.image-tag {
+    object-fit: contain
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.td-center {
+    text-align: center;
+}

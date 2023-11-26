@@ -1,0 +1,164 @@
+/* 64ac15 */
+.payments *,
+.payments *:before,
+.payments *:after {
+  box-sizing: border-box;
+}
+
+.payments h4 {
+  color: #003580;
+}
+.payments input,
+.payments input[type="radio"] + label,
+.payments input[type="checkbox"] + label:before,
+.payments select option,
+.payments select {
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.payments input:focus {
+  outline: 1;
+  border-color: #003580;
+}
+
+.payments input[type="radio"] {
+  display: none;
+}
+.payments input[type="radio"] + label,
+.payments select {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  float: none;
+  border-radius: 0;
+}
+.payments input[type="radio"] + label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.payments input[type="radio"] + label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.payments input[type="radio"] + label i {
+  padding-right: 0.4em;
+}
+.payments input[type="radio"]:checked + label,
+.payments input:checked + label:before,
+.payments select:focus,
+.payments select:active {
+  background-color: #003580;
+  color: #fff;
+  border-color: #003580;
+}
+.payments input[type="checkbox"] {
+  display: none;
+}
+.payments input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  padding-left: 1.6em;
+}
+.payments input[type="checkbox"] + label:before {
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  content: "";
+}
+.payments input[type="checkbox"] + label:after {
+  position: absolute;
+  top: 0.45em;
+  left: 0.2em;
+  font-size: 0.8em;
+  color: #fff;
+  opacity: 0;
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+.payments input:checked + label:after {
+  opacity: 1;
+}
+.payments select {
+  height: 3.4em;
+  line-height: 2;
+}
+.payments select:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.payments select:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.payments select:focus,
+.payments select:active {
+  outline: 0;
+}
+.payments select option {
+  background-color: #003580;
+  color: #fff;
+}
+.payments .input-group {
+  margin-bottom: 1em;
+  zoom: 1;
+}
+.payments .input-group:before,
+.payments .input-group:after {
+  content: "";
+  display: table;
+}
+.payments .input-group:after {
+  clear: both;
+}
+
+.payments.container {
+  max-width: 38em;
+  padding: 2em 3em 2em 3em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 4.2px;
+  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+.payments .col-half {
+  padding-right: 10px;
+  float: left;
+  width: 50%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

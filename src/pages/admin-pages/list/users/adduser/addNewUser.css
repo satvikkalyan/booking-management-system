@@ -1,0 +1,36 @@
+table,
+tr {
+    width: 100%;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px 10px 10px 10px;
+}
+
+img {
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
+}
+
+.list {
+    display: flex;
+    width: 100%;
+  }
+  .list .listContainer {
+    flex: 6 ;
+  }
+
+.select{
+    width: 200px;
+  }

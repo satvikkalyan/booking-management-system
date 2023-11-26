@@ -1,0 +1,36 @@
+table,
+tr {
+    width: 100%;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+.image-wrapper {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 10px 10px 10px 10px;
+}
+
+img {
+    object-fit: cover;
+    width: 230px;
+    height: 230px;
+}
+
+.td-width-start {
+    width: 20%;
+    text-align: right;
+    padding-left: 20px;
+
+}
+
+.td-width-end {
+    text-align: left;
+}
