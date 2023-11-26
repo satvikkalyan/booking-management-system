@@ -7,13 +7,10 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import { useNavigate } from "react-router-dom";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
-import { GoogleLogin } from "@leecheuk/react-google-login";
 import { useUpdateLoginDet } from "../../../UserContext";
 import { postDataToAPI } from "../../../components/utility/fetchCalls";
 import {
-  userAPI,
-  clientId,
-  userObj,
+  userAPI,  userObj,
 } from "../../../components/utility/constants";
 import {
   paperStyle2,
@@ -23,27 +20,7 @@ import {
 
 export default function Register() {
   const currentTimeStamp = new Date().getTime();
-  const mobilenumber = Math.floor(Math.random() * 10000000000).toString();
   const updateUserDetails = useUpdateLoginDet();
-  const onSuccess = (res) => {
-    res = res.profileObj;
-    console.log(res);
-    user.firstName = res.givenName;
-    user.lastName = res.familyName;
-    user.email = res.email;
-    user.mobile = mobilenumber;
-    setPassword(res.googleId);
-    postData(user).then(function (e) {
-      if (e.status === 200) {
-        console.log("POSTED ", e, user);
-        user.mobile = mobilenumber;
-        updateUserDetails(user);
-        navigate("/");
-      } else {
-        navigate("/login");
-      }
-    });
-  };
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [user, setUser] = useState(userObj);
@@ -54,9 +31,6 @@ export default function Register() {
       cardExpiry: "",
     },
   ];
-  const onFailure = (err) => {
-    console.log("failed:", err);
-  };
   const navigate = useNavigate();
   const checkPassword = () => {
     if (password?.length > 0 && confirmPassword?.length > 0) {
@@ -210,16 +184,6 @@ export default function Register() {
           <Link href="/login">Login</Link>
         </div>
         <br />
-        <div align="center">
-          <GoogleLogin
-            clientId={clientId}
-            buttonText="Register with Google"
-            onSuccess={onSuccess}
-            onFailure={onFailure}
-            cookiePolicy={"single_host_origin"}
-            isSignedIn={false}
-          />
-        </div>
       </Paper>
     </Grid>
   );

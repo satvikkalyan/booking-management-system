@@ -1,17 +1,13 @@
 import placeholderpic from "./../../resources/images/userprofile.jpeg"
-const API = `localhost:8081`
+const API = `http://localhost:8081`
 export const userAPI = `${API}/api/v1/users/`;
 export const roomsCountAPI = `${API}/api/v1/admins/roomscount/`;
 export const usersCountAPI =
   `${API}/api/v1/admins/customercount/`;
-export const todaysRevenue =
-  `${API}/api/v1/admins/revenue/today/`;
 export const totalRevenue =
   `${API}/api/v1/admins/revenue/`;
 export const propertiesAPI =
   `${API}/api/v1/properties/`;
-export const clientId =
-  `168682750427-9bd8ftc7gmmi1fm5fcb96m36iai8q484.apps.googleusercontent.com`;
 export const subscriptionAPI =   `${API}/api/v1/subscriptions/`;
 
 export const userDeleteAPI = `${API}/api/v1/users/delete/`

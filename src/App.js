@@ -1,5 +1,4 @@
 import "./App.css";
-import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/user-pages/home/Home";
 import { FilteredProperties } from "./pages/user-pages/filteredProperties/FilteredProperties";
@@ -9,7 +8,6 @@ import Register from "./pages/common-pages/register/Register";
 import NavBar from "./components/common-components/navbar/NavBar";
 import ForgotPassword from "./pages/common-pages/forgotpassword/ForgotPassword";
 import { UserDetailsProvider } from "./UserContext";
-import { gapi } from "gapi-script";
 import Profile from "./pages/common-pages/profile/Profile";
 import AdminHome from "./pages/admin-pages/home/admin-home";
 import PromotionsList from "./pages/admin-pages/list/promotions/promotionsList";
@@ -17,7 +15,6 @@ import UserList from "./pages/admin-pages/list/users/userList";
 import BookingsList from "./pages/admin-pages/list/bookings/bookingsList";
 import FeedBackList from "./pages/admin-pages/list/feedBackList/FeedBackList";
 import PropertiesList from "./pages/admin-pages/list/properties/propertiesList";
-import { clientId } from "./components/utility/constants";
 import AddNewUser from "./pages/admin-pages/list/users/adduser/addNewUser";
 import AddNewProperty from "./pages/admin-pages/list/properties/addproperties/addNewProperty";
 import AddNewPromotions from "./pages/admin-pages/list/promotions/addpromotions/addNewPromotions";
@@ -29,16 +26,6 @@ import TestFile from "./pages/common-pages/testPage/TestFile";
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 function App() {
-  useEffect(() => {
-    const initClient = () => {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    };
-    gapi.load("client:auth2", initClient);
-  });
-  // https://tawk.to/chat/63922c8db0d6371309d35bfb/1gjpfs266
   return (
     <UserDetailsProvider>
       <div>
