@@ -22,7 +22,6 @@ import FeedBack from "./pages/user-pages/feedback/feedback";
 import Payments from "./components/user-components/payments/Payments";
 import ConfirmationPage from "./components/user-components/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
-import TestFile from "./pages/common-pages/testPage/TestFile";
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 function App() {
@@ -64,7 +63,6 @@ function App() {
           />
           <Route path="/user/feedback" element={<FeedBack />} />
           <Route path="/errorPage" element={<ErrorPage />} />
-          <Route path="/test" element={<TestFile />} />
         </Routes>
       </div>
     </UserDetailsProvider>

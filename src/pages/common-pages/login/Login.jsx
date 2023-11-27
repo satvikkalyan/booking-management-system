@@ -64,7 +64,8 @@ export default function Login() {
   };
 
   return (
-    <Grid align="center">
+    <>
+          <Grid align="center">
       <Paper elevation={isLoading ? 0 : 10} style={paperStyle3}>
         {!isLoading && (
           <>
@@ -119,5 +120,7 @@ export default function Login() {
         {isLoading && <Loading />}
       </Paper>
     </Grid>
+</>
+
   );
 }
