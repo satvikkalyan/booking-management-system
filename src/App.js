@@ -28,7 +28,6 @@ function App() {
   return (
     <UserDetailsProvider>
       <div>
-        <NavBar />
         <TawkMessengerReact
                 propertyId="63922c8db0d6371309d35bfb"
                 widgetId="1gjpfs266"/>
