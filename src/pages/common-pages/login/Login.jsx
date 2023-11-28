@@ -3,7 +3,9 @@ import "./Login.css"
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import logo from "../../../resources/images/logo-no-background.png"
+import { useNavigate } from "react-router-dom";
 export default function Login() {
+    const navigate = useNavigate();
   return (
       <div className="login">
         <div className="login-container">
@@ -24,7 +26,7 @@ export default function Login() {
                         label="Password"
                         type="password"
                     />
-                    <Button id="login-button" variant="contained">Login</Button>
+                    <Button  id="login-button" variant="contained">Login</Button>
                 </div>
             </div>
         </div>
@@ -35,7 +37,9 @@ export default function Login() {
                     <h3>Signup and get best hotel deals!</h3>
                 </div>
                 <div className="inputs">
-                    <Button id="login-button" variant="contained">Sign Up</Button>
+                    <Button onClick={()=>{
+                        navigate("/register");
+                    }} id="login-button" variant="contained">Sign Up</Button>
                 </div>
             </div>
         </div>
