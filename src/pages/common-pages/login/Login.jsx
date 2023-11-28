@@ -8,9 +8,9 @@ export default function Login() {
     const navigate = useNavigate();
   return (
       <div className="login">
-        <div className="login-container">
+        <div className="login-screen-login-container">
             <a href="/"><img id="logo" src={logo} alt="Logo" /></a>
-            <div className="input-container">
+            <div className="login-screen-input-container">
                 <div className={"title"}>
                     <h1>Login to your account</h1>
                 </div>
@@ -30,13 +30,13 @@ export default function Login() {
                 </div>
             </div>
         </div>
-        <div className="signup-container">
-            <div className="signup-message-container">
+        <div className="login-screen-signup-container">
+            <div className="login-screen-signup-message-container">
                 <div className={"title"}>
                     <h2>New Here?</h2>
                     <h3>Signup and get best hotel deals!</h3>
                 </div>
-                <div className="inputs">
+                <div className="login-screen-inputs">
                     <Button onClick={()=>{
                         navigate("/register");
                     }} id="login-button" variant="contained">Sign Up</Button>
