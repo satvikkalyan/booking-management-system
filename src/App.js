@@ -5,7 +5,6 @@ import { FilteredProperties } from "./pages/user-pages/filteredProperties/Filter
 import Hotel from "./pages/user-pages/hotel/Hotel";
 import Login from "./pages/common-pages/login/Login";
 import Register from "./pages/common-pages/register/Register";
-import NavBar from "./components/common-components/navbar/NavBar";
 import ForgotPassword from "./pages/common-pages/forgotpassword/ForgotPassword";
 import { UserDetailsProvider } from "./UserContext";
 import Profile from "./pages/common-pages/profile/Profile";
@@ -22,15 +21,11 @@ import FeedBack from "./pages/user-pages/feedback/feedback";
 import Payments from "./components/user-components/payments/Payments";
 import ConfirmationPage from "./components/user-components/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 function App() {
   return (
     <UserDetailsProvider>
-      <div>
-        <TawkMessengerReact
-                propertyId="63922c8db0d6371309d35bfb"
-                widgetId="1gjpfs266"/>
+      <div className={"main-div"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<FilteredProperties />} />
