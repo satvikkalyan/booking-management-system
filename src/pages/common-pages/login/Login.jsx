@@ -7,7 +7,7 @@ export default function Login() {
   return (
       <div className="login">
         <div className="login-container">
-            <img id="logo" src={logo} alt="Logo" />
+            <a href="/"><img id="logo" src={logo} alt="Logo" /></a>
             <div className="input-container">
                 <div className={"title"}>
                     <h1>Login to your account</h1>
