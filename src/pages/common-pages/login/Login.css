@@ -43,12 +43,26 @@
     margin: 20px
 }
 .signup-container {
+    display: flex;
     background-color: navajowhite;
     width: 40%;
+    justify-content: center;
+    align-items: center;
+    /*border: 3px solid yellow;*/
 }
 #logo{
     height: 80px;
     width: 80px;
     align-self: flex-start;
     margin-bottom: 20px;
+}
+.signup-message-container{
+    /*border: 3px solid yellow;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    text-align: center;
 }

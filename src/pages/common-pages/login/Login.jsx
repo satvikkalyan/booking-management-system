@@ -28,7 +28,17 @@ export default function Login() {
                 </div>
             </div>
         </div>
-        <div className="signup-container"></div>
+        <div className="signup-container">
+            <div className="signup-message-container">
+                <div className={"title"}>
+                    <h2>New Here?</h2>
+                    <h3>Signup and get best hotel deals!</h3>
+                </div>
+                <div className="inputs">
+                    <Button id="login-button" variant="contained">Sign Up</Button>
+                </div>
+            </div>
+        </div>
       </div>
   );
 }
