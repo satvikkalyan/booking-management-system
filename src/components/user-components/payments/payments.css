@@ -6,7 +6,7 @@
 }
 
 .payments h4 {
-  color: #003580;
+  color: navajowhite;
 }
 .payments input,
 .payments input[type="radio"] + label,
@@ -27,7 +27,7 @@
 }
 .payments input:focus {
   outline: 1;
-  border-color: #003580;
+  border-color: navajowhite;
 }
 
 .payments input[type="radio"] {
@@ -56,9 +56,9 @@
 .payments input:checked + label:before,
 .payments select:focus,
 .payments select:active {
-  background-color: #003580;
+  background-color: navajowhite;
   color: #fff;
-  border-color: #003580;
+  border-color: navajowhite;
 }
 .payments input[type="checkbox"] {
   display: none;
@@ -108,7 +108,7 @@
   outline: 0;
 }
 .payments select option {
-  background-color: #003580;
+  background-color: navajowhite;
   color: #fff;
 }
 .payments .input-group {
