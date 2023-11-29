@@ -6,7 +6,7 @@ import PropertiesByTypes from "../../../components/user-components/propertiesByT
 import SponsoredProperties from "../../../components/user-components/sponsoredProperties/SponsoredProperties"
 import MailList from "../../../components/user-components/mailList/MailList";
 import Footer from "../../../components/user-components/footer/Footer";
-import NavBar from "../../../components/common-components/navbar/NavBar";
+import NavBar from "../../../components/common-components/navbarnew/Navbar";
 export const Home = () => {
   return (
     <div>

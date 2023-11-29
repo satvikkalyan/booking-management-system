@@ -25,7 +25,8 @@ import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
 function App() {
   return (
     <UserDetailsProvider>
-      <div className={"main-div"}>
+      <div className="main-div">
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<FilteredProperties />} />
@@ -58,7 +59,7 @@ function App() {
           <Route path="/user/feedback" element={<FeedBack />} />
           <Route path="/errorPage" element={<ErrorPage />} />
         </Routes>
-      </div>
+        </div>
     </UserDetailsProvider>
   );
 }

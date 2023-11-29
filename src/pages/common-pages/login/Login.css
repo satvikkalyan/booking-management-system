@@ -41,7 +41,7 @@
 }
 .login-screen-inputs #login-button{
     width: 50%;
-    background-color: #36454F
+    background-color: var(--button-color)
 }
 .login-screen-inputs .MuiFormControl-root {
     width: 100%;
@@ -49,7 +49,7 @@
 }
 .login-screen-signup-container {
     display: flex;
-    background-color: navajowhite;
+    background-color: var(--primary-color);
     width: 40%;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(1, 1, 1, 0.1);
     padding: 25px;
-    background-color: antiquewhite;
+    background-color: var(--secondary-color);
 }
 h2{
     text-align: center;
