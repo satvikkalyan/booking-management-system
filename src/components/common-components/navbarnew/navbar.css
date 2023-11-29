@@ -26,7 +26,6 @@
     align-self: center;
 }
 
-.button{
-    background-color: var(--button-color);
-    margin-left: 10px;
+.cb-signup-button{
+    margin-left: 10px !important;
 }

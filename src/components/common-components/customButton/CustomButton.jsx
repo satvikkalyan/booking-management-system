@@ -3,12 +3,11 @@ import Button from "@mui/material/Button";
 
 const CustomButton = (props) => {
     const buttonStyles = {
-        backgroundColor: 'var(--button-color)', // Use your custom variable here
-        marginLeft: '10px',
+        backgroundColor: 'var(--button-color)',
     };
 
     return (
-        <Button variant="contained" style={buttonStyles} onClick={props.onclick}>
+        <Button className={`cb-${props.className}`}variant="contained" style={buttonStyles} onClick={props.onclick}>
             {props.buttonName}
         </Button>
     );
