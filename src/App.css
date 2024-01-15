@@ -3,3 +3,7 @@
     --secondary-color: antiquewhite;
     --button-color: #36454F
 }
+
+.main-div{
+    background-color: var(--primary-color);
+}

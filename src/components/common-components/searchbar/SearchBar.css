@@ -1,0 +1,11 @@
+#search-bar-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+#search-bar{
+  border: 2px green solid;
+  width: 75%;
+}

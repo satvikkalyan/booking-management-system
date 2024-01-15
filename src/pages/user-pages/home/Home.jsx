@@ -7,11 +7,13 @@ import SponsoredProperties from "../../../components/user-components/sponsoredPr
 import MailList from "../../../components/user-components/mailList/MailList";
 import Footer from "../../../components/user-components/footer/Footer";
 import NavBar from "../../../components/common-components/navbarnew/Navbar";
+import SearchBar from "../../../components/common-components/searchbar/SearchBar";
 export const Home = () => {
   return (
     <div>
         <NavBar />
       <Header />
+        <SearchBar/>
       <div className="homeContainer">
         <PropertiesByCities />
         <h1 className="homeTitle">Browse by property type</h1>
