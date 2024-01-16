@@ -7,7 +7,7 @@ import SponsoredProperties from "../../../components/user-components/sponsoredPr
 import MailList from "../../../components/user-components/mailList/MailList";
 import Footer from "../../../components/user-components/footer/Footer";
 import NavBar from "../../../components/common-components/navbarnew/Navbar";
-import SearchBar from "../../../components/common-components/searchbar/SearchBar";
+import SearchBar from "../../../components/common-components/search-bar/searchBar";
 export const Home = () => {
   return (
     <div>
