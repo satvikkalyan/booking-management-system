@@ -252,7 +252,7 @@ const Payments = () => {
             <Button
               style={{
                 borderRadius: 15,
-                backgroundColor: "#003580",
+                backgroundColor: "navajowhite",
                 padding: "18px 36px",
               }}
               variant="contained"
@@ -267,7 +267,7 @@ const Payments = () => {
             <Button
               style={{
                 borderRadius: 15,
-                backgroundColor: "#003580",
+                backgroundColor: "navajowhite",
                 padding: "18px 36px",
               }}
               variant="contained"
