@@ -7,6 +7,11 @@
 }
 
 .pListItem{
+  border: 2px rgb(127,0,33,0.1) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex:1;
   border-radius: 10px;
   overflow: hidden;

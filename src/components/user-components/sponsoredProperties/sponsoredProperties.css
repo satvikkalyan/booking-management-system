@@ -7,16 +7,25 @@
 }
 
 .fpItem{
-  flex: 1;
-  gap: 10px;
+  border: 2px rgb(127,0,33,0.1) solid;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 10px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+
 }
 
 .fpImg{
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .fpName{
@@ -33,7 +42,7 @@
 }
 
 .fpRating>button{
-  background-color: navajowhite;
+  background-color: #7F0021;
   color: white;
   border: none;
   padding: 3px;

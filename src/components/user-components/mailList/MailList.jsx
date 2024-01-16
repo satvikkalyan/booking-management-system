@@ -1,10 +1,12 @@
 import "./mailList.css";
-import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import { postDataToAPI } from "../../utility/fetchCalls";
 import { subscriptionAPI } from "../../utility/constants";
-import { useState } from "react";
-
+import React, { useState } from "react";
+import CustomButton from "../../common-components/customButton/CustomButton";
+import TextField from "@mui/material/TextField";
+import {InputAdornment} from "@mui/material";
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 const MailList = () => {
   const [userEmail, setemail] = useState("");
   const navigate = useNavigate();
@@ -26,11 +28,20 @@ const MailList = () => {
         Sign up and we'll send the best deals to you
       </span>
       <div className="mailInputContainer">
-        <input type="text" placeholder="Your Email" onChange={handleChange} />
-        <Button onClick={enrollInSubscription}>Subscribe</Button>
+        <TextField
+            InputProps={{
+              startAdornment: (
+                  <InputAdornment position="start">
+                    <MailOutlineIcon />
+                  </InputAdornment>
+              ),
+            }}
+            id="email-input" label="Email" variant="outlined" onChange={handleChange}/>
+        <CustomButton   buttonName={"Subscribe"} onclick={enrollInSubscription} className={"subscribe-button"}/>
         {"  "}
-        <Button onClick={navigateToFeedBackPage}>FeedBack</Button>
+        <CustomButton   buttonName={"FeedBack"} onclick={navigateToFeedBackPage} className={"feedback-button"}/>
       </div>
+        <span className={"copyright"}>Copyright © 2022 DSVR.</span>
     </div>
   );
 };

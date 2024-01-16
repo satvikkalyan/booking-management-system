@@ -5,7 +5,6 @@ import PropertiesByCities from "../../../components/user-components/propertyByCi
 import PropertiesByTypes from "../../../components/user-components/propertiesByType/PropertiesByTypes";
 import SponsoredProperties from "../../../components/user-components/sponsoredProperties/SponsoredProperties"
 import MailList from "../../../components/user-components/mailList/MailList";
-import Footer from "../../../components/user-components/footer/Footer";
 import NavBar from "../../../components/common-components/navbarnew/Navbar";
 import SearchBar from "../../../components/common-components/search-bar/searchBar";
 export const Home = () => {
@@ -21,7 +20,6 @@ export const Home = () => {
         <h1 className="homeTitle">Homes guests love</h1>
         <SponsoredProperties/>
         <MailList/>
-        <Footer/>
       </div>
     </div>
   );
