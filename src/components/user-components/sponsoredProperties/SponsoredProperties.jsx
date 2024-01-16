@@ -28,7 +28,7 @@ const SponsoredProperties = () => {
         review: "Bad",
       },
       {
-        src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/322658536.jpg?k=3fffe63a365fd0ccdc59210188e55188cdb7448b9ec1ddb71b0843172138ec07&o=&hp=1",
+        src: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/135177328.jpg?k=4babdcdcd40d264d6f6818d07e0444addcbcc409ae3c6a8c38f41d183a02bc93&o=&hp=1",
         propertyName: "Hilton Garden Inn",
         location: "Indianapolis",
         price: 27,

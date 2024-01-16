@@ -15,8 +15,9 @@
     justify-content: space-between;
     margin-bottom: 5px;
     margin-top: 5px;
-    border: 2px var(--secondary-color) solid;
+    border: 2px #7F0021 solid;
     border-radius: 20px;
+    background-color: var(--secondary-color);
 }
 .search-item{
     margin: 20px;
