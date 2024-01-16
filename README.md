@@ -1,24 +1,5 @@
 # booking-management-system
 
-# Team Members:
-**1. Reece** 
-**2. Satvik**  
-**3. Vineeth**
-**4. Divyank**
-
-# Developer Guidelines:
-
-1. Pick up JIRA story from ToDo and move it to In Progress status and get assigned to yourself.
-2. Prefixes for making branches:
-   - Feature - feat/
-   - Bug - bug/
-3. Before starting development, take latest merge from develop branch. Copy your JIRA ticket number and create a feature branch from develop branch. eg. feat/SET2BS-6
-4. After coding, push your branch and create PR.
-5. **Never Push your code directly to Develop or Main Branch**
-6. As your ticket progress, move your JIRA ticket to proper workflows.
-7. Once the feature has been released or deployed, we can't move back the ticket. Create another bug ticket and start working on it. 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

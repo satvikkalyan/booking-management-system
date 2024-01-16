@@ -1,6 +1,4 @@
 import "./header.css";
-import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css";
 import {useNavigate} from "react-router-dom";
 import CustomButton from "../../common-components/customButton/CustomButton";
 import Carousel from 'react-material-ui-carousel'
