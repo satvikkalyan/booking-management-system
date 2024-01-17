@@ -21,12 +21,19 @@ import FeedBack from "./pages/user-pages/feedback/feedback";
 import Payments from "./components/user-components/payments/Payments";
 import ConfirmationPage from "./components/user-components/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
+import NavBar from "./components/common-components/navbarnew/Navbar";
+import React, {useState} from "react";
+import Header from "./components/user-components/header/Header";
+import SearchBar from "./components/common-components/search-bar/searchBar";
 
 function App() {
+  const [displayHeader,setDisplayHeader] = useState(false)
   return (
     <UserDetailsProvider>
       <div className="main-div">
-
+        <NavBar />
+        {displayHeader && <Header/>}
+        <SearchBar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<FilteredProperties />} />

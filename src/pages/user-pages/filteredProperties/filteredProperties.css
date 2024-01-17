@@ -1,19 +1,27 @@
-.listContainer {
+.hotels-view-container{
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: row;
+  padding: 5px;
 }
 
-.listWrapper {
-  width: 100%;
-  max-width: 1024px;
+.filter-box-container{
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 18%;
 }
+
+.hotels-display-container{
+  width: 64%;
+}
+
 
 .listSearch {
   flex: 1;
-  background-color: #febb02;
+  background-color: var(--secondary-color);
+  margin-top: 50px;
+  border: var(--solid-border);
   padding: 10px;
   border-radius: 10px;
   position: sticky;
@@ -23,7 +31,7 @@
 
 .lsTitle{
   font-size: 20px;
-  color: #555;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -33,51 +41,35 @@
   gap: 5px;
   margin-bottom: 10px;
 }
-
-.lsItem>label{
-  font-size: 12px;
-}
-
-.lsItem>input{
-  height: 30px;
-  border: none;
-  padding: 5px;
-}
-.lsItem>span{
-  height: 30px;
-  padding: 5px;
-  background-color: white;
+.lsItem-button{
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
 }
-
 .lsOptions{
   padding: 10px;
 }
 
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+
 .lsOptionItem{
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  height: 20px;
   margin-bottom: 10px;
-  color: #555;
+  color: black;
   font-size: 12px;
 }
 
-.lsOptionInput{
-  width: 50px;
-}
-
-.listSearch>button{
-  padding: 10px;
-  background-color: #0071c2;
-  color: white;
-  border: none;
-  width: 100%;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 .listResult {
-  flex: 3;
+  width: 100%;
 }

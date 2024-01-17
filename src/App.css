@@ -1,7 +1,10 @@
 :root {
     --primary-color: navajowhite;
     --secondary-color: antiquewhite;
-    --button-color: #36454F
+    --button-color: #36454F;
+    --border-color: #7F0021;
+    --transparant-border:  2px rgb(127,0,33,0.1) solid;
+    --solid-border:  2px #7F0021 solid;
 }
 
 .main-div{

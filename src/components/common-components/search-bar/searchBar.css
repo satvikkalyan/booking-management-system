@@ -15,7 +15,7 @@
     justify-content: space-between;
     margin-bottom: 5px;
     margin-top: 5px;
-    border: 2px #7F0021 solid;
+    border: var(--solid-border);
     border-radius: 20px;
     background-color: var(--secondary-color);
 }
