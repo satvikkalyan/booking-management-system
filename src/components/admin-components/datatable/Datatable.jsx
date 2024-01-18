@@ -40,7 +40,6 @@ const Datatable = (props) => {
     if (bookingID?.length > 0)
     {
 
-    console.log("Entered here")
       checkoutUser(id).then((e) => {
         console.log(e);
         // window.location.reload();

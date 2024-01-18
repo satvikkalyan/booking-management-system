@@ -37,9 +37,9 @@ const MailList = () => {
               ),
             }}
             id="email-input" label="Email" variant="outlined" onChange={handleChange}/>
-        <CustomButton   buttonName={"Subscribe"} onclick={enrollInSubscription} className={"subscribe-button"}/>
+        <CustomButton   buttonName={"Subscribe"} onClick={enrollInSubscription} className={"subscribe-button"}/>
         {"  "}
-        <CustomButton   buttonName={"FeedBack"} onclick={navigateToFeedBackPage} className={"feedback-button"}/>
+        <CustomButton   buttonName={"FeedBack"} onClick={navigateToFeedBackPage} className={"feedback-button"}/>
       </div>
         <span className={"copyright"}>Copyright © 2022 DSVR.</span>
     </div>

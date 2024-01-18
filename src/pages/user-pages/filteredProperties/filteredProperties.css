@@ -16,7 +16,6 @@
   width: 64%;
 }
 
-
 .listSearch {
   flex: 1;
   background-color: var(--secondary-color);
@@ -55,8 +54,6 @@
   justify-content: center;
   margin-top: 20px;
 }
-
-
 
 .lsOptionItem{
   display: flex;

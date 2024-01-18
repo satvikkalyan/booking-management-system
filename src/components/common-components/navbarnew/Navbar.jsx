@@ -11,8 +11,8 @@ const Navbar = () => {
             <div className={"content-div"}>
                 <a href={"/"}><img className={"logo"} src={logo} alt={"Logo"}/></a>
                 <div className={"navigation-buttons"}>
-                    <CustomButton   buttonName={"Login"} onclick={()=>navigate("/login")} className={"login-button"}/>
-                    <CustomButton   buttonName={"Sign Up"} onclick={()=>navigate("/register")} className={"signup-button"}/>
+                    <CustomButton   buttonName={"Login"} onClick={()=>navigate("/login")} className={"login-button"}/>
+                    <CustomButton   buttonName={"Sign Up"} onClick={()=>navigate("/register")} className={"signup-button"}/>
                 </div>
             </div>
         </div>

@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import MailList from "../../../components/user-components/mailList/MailList";
-import Header from "../../../components/user-components/header/Header";
 import BedSelection from "../../../components/user-components/bedSelectionModal/BedSelection";
 import Button from "@mui/material/Button";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -27,6 +26,7 @@ const Hotel = () => {
   const location = useLocation();
   const [photos, setPhotos] = useState([]);
   const [hotelData] = useState(location?.state?.item);
+  console.log(hotelData)
   const totalDays = getNumberOfDays(
     location?.state?.date[0]?.endDate,
     location?.state?.date[0]?.startDate
@@ -35,11 +35,11 @@ const Hotel = () => {
     if (photos?.length === 0) {
       var photos2 = [];
       photos2.push({ src: hotelData?.img });
-      photos2.push({ src: hotelData?.imageSource1 });
-      photos2.push({ src: hotelData?.imageSource2 });
-      photos2.push({ src: hotelData?.imageSource3 });
-      photos2.push({ src: hotelData?.imageSource4 });
-      photos2.push({ src: hotelData?.imageSource4 });
+      photos2.push({ src: hotelData?.img });
+      photos2.push({ src: hotelData?.img });
+      photos2.push({ src: hotelData?.img });
+      photos2.push({ src: hotelData?.img });
+      photos2.push({ src: hotelData?.img });
       setPhotos(photos2)
     }
 
@@ -70,8 +70,6 @@ const Hotel = () => {
   };
 
   return (
-    <div>
-      <Header type="list" />
       <div className="hotelContainer">
         {open && (
           <div className="slider">
@@ -103,7 +101,7 @@ const Hotel = () => {
           <h1 className="hotelTitle"> {hotelData.propertyName} </h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
-            <span>{hotelData.location}</span>
+            <span>{hotelData.city}</span>
           </div>
           <span className="hotelPriceHighlight">
             Book a stay over $114 at this property and get a free airport taxi
@@ -154,7 +152,6 @@ const Hotel = () => {
           />
         )}
       </div>
-    </div>
   );
 };
 

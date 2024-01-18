@@ -10,7 +10,12 @@ const SearchItem = (props) => {
   const date = props.props.date;
   const item = props.props.item;
   const handleNavigate = () => {
-    navigate(`/hotels/${item.id}`, { state: { id, date, item } });
+    navigate(`/hotels/${item.id}`, {
+      state: {
+          id, date, item, pageInfo: {
+          currentPage: 'hotelDetail'
+        } },
+       });
   };
   return (
     <div className="searchItem">

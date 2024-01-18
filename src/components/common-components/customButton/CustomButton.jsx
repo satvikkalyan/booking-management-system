@@ -7,7 +7,7 @@ const CustomButton = (props) => {
     };
 
     return (
-        <Button className={`cb-${props.className}`}variant="contained" style={buttonStyles} onClick={props.onclick}>
+        <Button className={`cb-${props.className}`}variant="contained" style={buttonStyles} onClick={props.onClick}>
             {props.buttonName}
         </Button>
     );

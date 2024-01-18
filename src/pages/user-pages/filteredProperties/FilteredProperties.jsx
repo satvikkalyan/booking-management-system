@@ -13,9 +13,17 @@ export const FilteredProperties = () => {
     const [newDestination, setNewDestination] = useState("");
     const [newProps, setNewProps] = useState(properties);
     const [date, setDate] = useState([null]);
-    const [options] = useState(location?.state?.options);
+    console.log(location?.state)
+    const [searchData] = useState(location?.state);
     const filteredProps = newProps
     const [openDate, setOpenDate] = useState(false);
+
+    useEffect(()=>
+        {
+            //API CAll to Get Properties
+
+        },[]
+    )
     const handleSearch = () => {
         setDestination(newDestination);
     };
@@ -78,7 +86,7 @@ export const FilteredProperties = () => {
                                            }}
 
                                            type="number" id="rooms-input"
-                                           placeholder={options?.room ? options?.room : "1"} variant="outlined"/>
+                                           placeholder={searchData?.adult ? searchData?.adult : "1"} variant="outlined"/>
                             </div>
                         </div>
                     </div>

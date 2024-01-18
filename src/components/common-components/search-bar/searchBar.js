@@ -6,13 +6,16 @@ import {InputAdornment} from "@mui/material";
 import PeopleIcon from '@mui/icons-material/People';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import {useNavigate} from "react-router-dom";
 
 const SearchBar = () => {
     const today = new Date();
+    const navigate = useNavigate();
     const formattedToday = today.toLocaleDateString('en-US', {month: '2-digit', day: '2-digit', year: 'numeric'});
     const [adult, setAdult] = useState()
     const [destination, setDestination] = useState()
     const [toDate, setToDate] = useState()
+    const [toDateError, setToDateError] = useState(false)
     const [fromDate, setFromDate] = useState(formattedToday)
     const handleAdultChange = (event) => {
         setAdult(event.target.value)
@@ -26,14 +29,35 @@ const SearchBar = () => {
     const handleDestination = (event) => {
         setDestination(event.target.value)
     }
+    const handleSearch = () => {
+        const fromDateObj = new Date(fromDate);
+        const toDateObj = new Date(toDate);
+        setToDateError(false)
+        if (fromDateObj <= toDateObj ){
+            navigate("/hotels",{
+                state : {
+                    toDate:toDate,
+                    fromDate:fromDate,
+                    adult:adult,
+                    destination: destination,
+                    pageInfo: {
+                        currentPage: 'filteredProperties'
+                    }
+                },
 
+            })
+        }
+        else{
+            setToDateError(true)
+        }
+    }
     return (<div className={"searchBar-outer"}>
         <div className={"search-bar-outline"}>
             <div className={"search-item"}>
                 <TextField InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
-                            <FmdGoodIcon/>
+                            <FmdGoodIcon style={{ fontSize: 'medium' }}/>
                         </InputAdornment>
                     ),
                     style: {
@@ -58,7 +82,7 @@ const SearchBar = () => {
                 <TextField InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
-                            <CalendarMonthIcon/>
+                            <CalendarMonthIcon style={{ fontSize: 'medium' }}/>
                         </InputAdornment>
                     ),
                     style: {
@@ -81,7 +105,7 @@ const SearchBar = () => {
                 <TextField InputProps={{
                     startAdornment: (
                         <InputAdornment position="start">
-                            <CalendarMonthIcon/>
+                            <CalendarMonthIcon style={{ fontSize: 'medium' }}/>
                         </InputAdornment>
                     ),
                     style: {
@@ -99,14 +123,14 @@ const SearchBar = () => {
                            variant="outlined"
                            value={toDate}
                            onChange={handleToDate}
+                           error={toDateError}
                 />
             </div>
             <div className={"search-item"}>
-
                 <TextField InputProps={{
                     startAdornment: (
-                        <InputAdornment position="start">
-                            <PeopleIcon/>
+                        <InputAdornment position="start"  >
+                            <PeopleIcon style={{ fontSize: 'medium' }} />
                         </InputAdornment>
                     ),
                     style: {
@@ -129,8 +153,7 @@ const SearchBar = () => {
                 />
             </div>
             <div className={"search-item"}>
-                <CustomButton buttonName={"Search"} onclick={() => {
-                }} className={"search-button"}/>
+                <CustomButton buttonName={"Search"} onClick={handleSearch} className={"search-button"}/>
             </div>
         </div>
     </div>)
