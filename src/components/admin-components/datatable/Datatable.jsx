@@ -41,8 +41,6 @@ const Datatable = (props) => {
     {
 
       checkoutUser(id).then((e) => {
-        console.log(e);
-        // window.location.reload();
         navigate("/");
       });
     }

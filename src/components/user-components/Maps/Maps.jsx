@@ -17,7 +17,6 @@ export default function Maps(props) {
   const center = { lat: 48.8584, lng: 2.2945 };
 
   async function calculateRoute() {
-    console.log(props.props.from,props.props.toDes)
     // eslint-disable-next-line no-undef
     const directionsService = new google.maps.DirectionsService();
     const results = await directionsService.route({

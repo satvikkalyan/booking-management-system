@@ -26,17 +26,17 @@ export const getNumberOfDays = (fromDate, toDate) => {
 
 export const generateTemplate = (roomData) => {
   var bedArray = [];
-  roomData.map((item) => {
+  roomData?.map((item) => {
     const rommDet = {
-      id: item.id,
+      id: item?.id,
       beds: {
         NW: false,
         NE: false,
         SW: false,
         SE: false,
       },
-      availability: item.bedsAvailable,
-      roomName:item.roomName
+      availability: item?.bedsAvailable,
+      roomName:item?.roomName
     };
     bedArray.push(rommDet);
   });

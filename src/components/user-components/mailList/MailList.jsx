@@ -12,7 +12,6 @@ const MailList = () => {
   const navigate = useNavigate();
   const enrollInSubscription = () => {
     postDataToAPI(subscriptionAPI, { email: userEmail }).then((data) => {
-      console.log(data);
     });
   };
   const navigateToFeedBackPage = () => {

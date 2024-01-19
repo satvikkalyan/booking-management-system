@@ -69,7 +69,6 @@ export const getUsersByEmail = (userEmail ) =>{
 
 
 export const deleteItem = (URL,id) =>{
-  console.log(URL+id+"/")
   return fetch(URL+id+"/",{method:"Delete"})
 
 }

@@ -1,0 +1,76 @@
+.bed-selection-modal {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 20%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    border: var(--solid-border);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.cross-pane{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    height: 10%;
+}
+.cross-pane .icon-container {
+    cursor: pointer;
+}
+
+.bed-selection-pane{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+}
+.bed-selection-view {
+    border: 10px saddlebrown dashed;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.bed-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.bed-icon{
+    cursor: pointer;
+    font-size: 100px;
+}
+.bed-details{
+    margin-top: 10px;
+
+}
+.button-pane{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+.bed-icon.unclickable {
+    color: grey;
+    cursor: not-allowed;
+}
+
+.bed-icon.selected {
+    color: black;
+}
+
+.bed-icon.available {
+    color: white;
+}

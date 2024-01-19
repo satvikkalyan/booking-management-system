@@ -52,9 +52,7 @@ const Payments = () => {
           expiryDate.length == 5 &&
           cardNumber.length > 5
         ) {
-          console.log(
-            `https://bms-backend-spring-prelive.herokuapp.com/api/v1/bookings/${userDetails.id}/${bookingDets.hotelData.id}/`
-          );
+
           postDataToAPI(
             `https://bms-backend-spring-prelive.herokuapp.com/api/v1/bookings/${userDetails.id}/${bookingDets.hotelData.id}/`,
             bookingJson
@@ -65,9 +63,7 @@ const Payments = () => {
           });
         }
       } else {
-        console.log(
-          `https://bms-backend-spring-prelive.herokuapp.com/api/v1/bookings/${userDetails.id}/${bookingDets.hotelData.id}/`
-        );
+
 
         postDataToAPI(
           `https://bms-backend-spring-prelive.herokuapp.com/api/v1/bookings/${userDetails.id}/${bookingDets.hotelData.id}/`,

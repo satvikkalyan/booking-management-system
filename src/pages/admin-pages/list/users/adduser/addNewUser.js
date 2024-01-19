@@ -55,9 +55,7 @@ export default function AddNewUser() {
     }
     let { userType, ...actualData } = user;
     postDataToAPI(userAPI, actualData).then((e) => {
-      console.log(actualData)
       if (e.status === 200) {
-        console.log("User Created", user);
         navigate("/admin/users");
       } else {
         console.log(e);

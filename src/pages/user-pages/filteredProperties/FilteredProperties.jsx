@@ -13,7 +13,6 @@ export const FilteredProperties = () => {
     const [newDestination, setNewDestination] = useState("");
     const [newProps, setNewProps] = useState(properties);
     const [date, setDate] = useState([null]);
-    console.log(location?.state)
     const [searchData] = useState(location?.state);
     const filteredProps = newProps
     const [openDate, setOpenDate] = useState(false);
