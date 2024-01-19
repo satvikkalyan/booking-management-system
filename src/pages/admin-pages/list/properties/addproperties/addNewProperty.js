@@ -126,7 +126,6 @@ export default function AddNewProperty() {
     if (room1Name.length > 0 || room2Name.length > 0)
       finalVal["roomTypeResourceList"] = roomTypeResourceList;
     postPropData(finalVal).then((data) => {
-      console.log(data);
       navigate("/admin/properties")
     });
   };

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes, useLocation} from "react-router-dom";
 import { Home } from "./pages/user-pages/home/Home";
 import { FilteredProperties } from "./pages/user-pages/filteredProperties/FilteredProperties";
 import Hotel from "./pages/user-pages/hotel/Hotel";
@@ -21,12 +21,26 @@ import FeedBack from "./pages/user-pages/feedback/feedback";
 import Payments from "./components/user-components/payments/Payments";
 import ConfirmationPage from "./components/user-components/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
+import NavBar from "./components/common-components/navbarnew/Navbar";
+import React, {useEffect, useState} from "react";
+import Header from "./components/user-components/header/Header";
+import SearchBar from "./components/common-components/search-bar/searchBar";
 
 function App() {
+  const location = useLocation()
+  const [displayHeader,setDisplayHeader] = useState(true)
+  useEffect(() => {
+    const currentPage = location?.state?.pageInfo?.currentPage
+    if(currentPage && currentPage!=="Home"){
+      setDisplayHeader(false)
+    }
+  }, [ location?.state?.pageInfo?.currentPage]);
   return (
     <UserDetailsProvider>
       <div className="main-div">
-
+        <NavBar />
+        <SearchBar/>
+        {displayHeader && <Header/>}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hotels" element={<FilteredProperties />} />

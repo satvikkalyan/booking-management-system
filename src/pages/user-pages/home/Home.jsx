@@ -10,9 +10,6 @@ import SearchBar from "../../../components/common-components/search-bar/searchBa
 export const Home = () => {
   return (
     <div>
-        <NavBar />
-      <Header />
-        <SearchBar/>
       <div className="homeContainer">
         <PropertiesByCities />
         <h1 className="homeTitle">Browse by property type</h1>

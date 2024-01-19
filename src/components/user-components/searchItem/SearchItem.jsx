@@ -1,6 +1,8 @@
 import "./searchItem.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import CustomButton from "../../common-components/customButton/CustomButton";
+import React from "react";
 
 const SearchItem = (props) => {
   const navigate = useNavigate();
@@ -8,7 +10,12 @@ const SearchItem = (props) => {
   const date = props.props.date;
   const item = props.props.item;
   const handleNavigate = () => {
-    navigate(`/hotels/${item.id}`, { state: { id, date, item } });
+    navigate(`/hotels/${item.id}`, {
+      state: {
+          id, date, item, pageInfo: {
+          currentPage: 'hotelDetail'
+        } },
+       });
   };
   return (
     <div className="searchItem">
@@ -33,9 +40,7 @@ const SearchItem = (props) => {
         <div className="siDetailTexts">
           <span className="siPrice">${item.price}</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <Button variant="contained" type="button" onClick={handleNavigate}>
-            See availability
-          </Button>
+          <CustomButton className="check-avail-button" buttonName={"See availability"} onClick={handleNavigate}/>
         </div>
       </div>
     </div>

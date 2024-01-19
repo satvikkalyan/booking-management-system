@@ -10,7 +10,6 @@ const PromotionsList = () => {
 useEffect(() => {
   getPromotions().then((data)=>{
     setPromotionsData(data)
-    console.log(data)
   })
 
   return () => {

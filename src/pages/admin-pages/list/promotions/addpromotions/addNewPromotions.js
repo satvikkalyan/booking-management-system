@@ -41,7 +41,6 @@ export default function AddNewPromotions() {
     ) {
       promotionData.discount = parseInt(promotionData?.discount);
       postDataToAPI(promotionsAPI, promotionData).then((e) => {
-        console.log(e);
         navigate("/admin/promotions");
       });
     } else {

@@ -14,7 +14,6 @@ import ReactToPrint from "react-to-print";
 function ConfirmationPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location.state);
   var current = new Date();
   var currentMonth = current.getMonth() + 1;
   if (currentMonth < 10) {

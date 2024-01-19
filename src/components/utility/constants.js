@@ -234,7 +234,6 @@ export const propertiesColumns = [
     headerName: "Status",
     width: 160,
     renderCell: (params) => {
-      console.log(params.row.status)
       return (
         <div className={`cellWithStatus ${params.row.status}`}>
           {((params.row.status === "active")||(params.row.status === "Available") ) ?  <>Available</> :<>Unavailable</>}
@@ -271,7 +270,6 @@ export const promotionsCol = [
       if (params.row.status === true) {
         activeStatus = "active";
       }
-      console.log(params.row)
       return (
         <div className={`cellWithStatus ${activeStatus}`}>
           {params.row?.promotionTitle?.length>0  && <>Active</>}
