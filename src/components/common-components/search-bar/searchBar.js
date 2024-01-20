@@ -67,7 +67,7 @@ const SearchBar = () => {
                 }}
                            InputLabelProps={{
                                style: {
-                                   fontSize: 'small',
+                                   fontSize: 'medium',
                                },
                            }}
                            id="destination-input"
@@ -92,7 +92,7 @@ const SearchBar = () => {
                 }}
                            InputLabelProps={{
                                style: {
-                                   fontSize: 'small',
+                                   fontSize: 'medium',
                                },
                            }}
                            id="from-date-input"
@@ -115,7 +115,7 @@ const SearchBar = () => {
                 }}
                            InputLabelProps={{
                                style: {
-                                   fontSize: 'small',
+                                   fontSize: 'medium',
                                },
                            }}
                            id="to-date-input"
@@ -141,7 +141,7 @@ const SearchBar = () => {
                 }}
                            InputLabelProps={{
                                style: {
-                                   fontSize: 'small',
+                                   fontSize: 'medium',
                                },
                            }}
                            id="number-of-adults"

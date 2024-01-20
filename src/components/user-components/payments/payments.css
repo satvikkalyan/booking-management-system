@@ -6,7 +6,7 @@
 }
 
 .payments h4 {
-  color: navajowhite;
+  color: black;
 }
 .payments input,
 .payments input[type="radio"] + label,
@@ -108,8 +108,8 @@
   outline: 0;
 }
 .payments select option {
-  background-color: navajowhite;
-  color: #fff;
+  background-color: var(--border-color);
+  color: black;
 }
 .payments .input-group {
   margin-bottom: 1em;

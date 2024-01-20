@@ -3,7 +3,7 @@
     top: 50%;
     left: 40%;
     width: 20%;
-    height: 40%;
+    height: 50%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 5;
@@ -13,6 +13,24 @@
     flex-direction: column;
 }
 
+.bed-selection-pane{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+}
+
+.bed-selection-view {
+    border: 10px saddlebrown dashed;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: fit-content;
+    width: fit-content;
+}
 .cross-pane{
     display: flex;
     flex-direction: row;
@@ -25,21 +43,7 @@
     cursor: pointer;
 }
 
-.bed-selection-pane{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70%;
-}
-.bed-selection-view {
-    border: 10px saddlebrown dashed;
-    background-color: burlywood;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-}
+
 .bed-row {
     display: flex;
     justify-content: space-between;
@@ -48,7 +52,6 @@
 
 .bed-icon{
     cursor: pointer;
-    font-size: 100px;
 }
 .bed-details{
     margin-top: 10px;

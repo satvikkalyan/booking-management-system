@@ -7,7 +7,6 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
-import BedSelection from "../../../components/user-components/bedSelectionModal/BedSelection";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLoginDet } from "../../../UserContext";
 import {

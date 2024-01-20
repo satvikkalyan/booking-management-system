@@ -1,14 +1,14 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-const CustomButton = (props) => {
+const CustomButton = ({className,buttonName,onClick , disabled}) => {
     const buttonStyles = {
         backgroundColor: 'var(--button-color)',
     };
 
     return (
-        <Button className={`cb-${props.className}`}variant="contained" style={buttonStyles} onClick={props.onClick}>
-            {props.buttonName}
+        <Button disabled={disabled} className={`cb-${className}`} variant="contained" style={buttonStyles} onClick={onClick}>
+            {buttonName}
         </Button>
     );
 };

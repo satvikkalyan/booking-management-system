@@ -29,17 +29,26 @@ import SearchBar from "./components/common-components/search-bar/searchBar";
 function App() {
   const location = useLocation()
   const [displayHeader,setDisplayHeader] = useState(true)
+  const [displaySearchBar,setDisplaySearchBar] = useState(true)
+  console.log("App data",location.state?.pageInfo)
   useEffect(() => {
     const currentPage = location?.state?.pageInfo?.currentPage
     if(currentPage && currentPage!=="Home"){
       setDisplayHeader(false)
     }
+    if(currentPage && currentPage==="Payments"){
+      setDisplaySearchBar(false)
+    }
+    else{
+      setDisplaySearchBar(true)
+    }
+    console.log("currentPage ",currentPage)
   }, [ location?.state?.pageInfo?.currentPage]);
   return (
     <UserDetailsProvider>
       <div className="main-div">
         <NavBar />
-        <SearchBar/>
+        {displaySearchBar && <SearchBar/>}
         {displayHeader && <Header/>}
         <Routes>
           <Route path="/" element={<Home />} />

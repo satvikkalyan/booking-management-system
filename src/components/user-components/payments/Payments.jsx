@@ -2,9 +2,9 @@ import "./payments.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Fragment, useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import { useLoginDet } from "../../../UserContext";
 import { postDataToAPI, getDataFromAPI } from "../../utility/fetchCalls";
+import CustomButton from "../../common-components/customButton/CustomButton";
 const Payments = () => {
   const userDetails = useLoginDet();
   let [isCreditCard, setIsCreditCard] = useState(true);
@@ -245,33 +245,10 @@ const Payments = () => {
         )}
         <div className="flex-container">
           <div className="flex-child magenta">
-            <Button
-              style={{
-                borderRadius: 15,
-                backgroundColor: "navajowhite",
-                padding: "18px 36px",
-              }}
-              variant="contained"
-              fullWidth
-              onClick={navigateToConfirmPage}
-              disabled={!isOk}
-            >
-              Continue
-            </Button>
+            <CustomButton disabled={!isOk}  className={"payment-submit"} buttonName={"Continue"} onClick={navigateToConfirmPage}/>
           </div>
           <div className="flex-child green">
-            <Button
-              style={{
-                borderRadius: 15,
-                backgroundColor: "navajowhite",
-                padding: "18px 36px",
-              }}
-              variant="contained"
-              fullWidth
-              onClick={navigateToHomePage}
-            >
-              Cancel
-            </Button>
+            <CustomButton className={"payment-cancel"} buttonName={"Cancel"} onClick={navigateToHomePage}/>
           </div>
         </div>
       </div>
