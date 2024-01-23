@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useLoginDet } from "../../../UserContext";
+import { useLoginDet } from "../../../context/UserContext";
 import {
   isUserLoggedIn,
   getNumberOfDays,

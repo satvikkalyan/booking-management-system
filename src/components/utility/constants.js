@@ -24,6 +24,17 @@ export const userObj = {
   bookings: [],
 };
 
+export const bookingObj = {
+  propertyID: "",
+  fromDate: "",
+  toDate: "",
+  paymentInformation:{},
+  user: null,
+  rooms: [],
+  adults: 0,
+  destination: ""
+};
+
 export const hotelDataTemplate = {
   hotelAddress: "Elton St 125 New york",
   descriptionTitle: "Stay in the heart of City",

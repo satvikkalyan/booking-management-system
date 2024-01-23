@@ -5,7 +5,7 @@ import TextField from "@mui/material/TextField";
 import logo from "../../../resources/images/logo-no-background.png"
 import {useNavigate} from "react-router-dom";
 import {loginUser} from "../../../service/userService";
-import {useUpdateLoginDet} from "../../../UserContext";
+import {useUpdateLoginDet} from "../../../context/UserContext";
 
 export default function Login() {
     const navigate = useNavigate();

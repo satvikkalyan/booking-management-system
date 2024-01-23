@@ -2,7 +2,7 @@ import "./payments.css";
 import {useLocation, useNavigate} from "react-router-dom";
 import {Fragment, useState, useEffect} from "react";
 import TextField from "@mui/material/TextField";
-import {useLoginDet} from "../../../UserContext";
+import {useLoginDet} from "../../../context/UserContext";
 import {postDataToAPI, getDataFromAPI} from "../../utility/fetchCalls";
 import CustomButton from "../../common-components/customButton/CustomButton";
 

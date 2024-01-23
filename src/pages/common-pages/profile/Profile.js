@@ -8,7 +8,7 @@ import "./profile.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import { flex_style, paperStyle,bookingsColumns } from "../../../components/utility/constants";
-import { useLoginDet } from "../../../UserContext";
+import { useLoginDet } from "../../../context/UserContext";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Datatable from "../../../components/admin-components/datatable/Datatable";
 import { bookingRows } from "../../../resources/sampleData/sampleBookings";

@@ -3,7 +3,7 @@ import logo from "../../../resources/images/logo-no-background.png"
 import "./navbar.css"
 import CustomButton from "../customButton/CustomButton";
 import {useNavigate} from "react-router-dom";
-import {useLoginDet, useUpdateLoginDet} from "../../../UserContext";
+import {useLoginDet, useUpdateLoginDet} from "../../../context/UserContext";
 import {userObj} from "../../utility/constants";
 
 const Navbar = () => {

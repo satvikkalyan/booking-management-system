@@ -7,7 +7,7 @@ import Paper from "@mui/material/Paper";
 import { paperStyle } from "../../../components/utility/constants";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useLoginDet } from "../../../UserContext";
+import { useLoginDet } from "../../../context/UserContext";
 import QRCode from "react-qr-code";
 import ReactToPrint from "react-to-print";
 
