@@ -38,7 +38,14 @@ export default function Login() {
                 </div>
                 <div className="login-screen-inputs">
                     <Button onClick={()=>{
-                        navigate("/register");
+                        navigate("/register",{
+            state : {
+                pageInfo: {
+                    currentPage: 'Register'
+                }
+            },
+
+        });
                     }} id="login-button" variant="contained">Sign Up</Button>
                 </div>
             </div>

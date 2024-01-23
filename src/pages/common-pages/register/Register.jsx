@@ -56,7 +56,14 @@ export default function Register() {
             </div>
             <div className="inputs">
               <Button onClick={()=>{
-                navigate("/login");
+                navigate("/login",{
+            state : {
+                pageInfo: {
+                    currentPage: 'Login'
+                }
+            },
+
+        });
               }} id="login-button" variant="contained">Login</Button>
             </div>
           </div>

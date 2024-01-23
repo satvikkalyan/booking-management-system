@@ -9,10 +9,24 @@ export default function NavBar() {
   const navigate = useNavigate();
   const someValueUpdate = useUpdateLoginDet();
   const onLoginClicked = () => {
-    navigate("/login");
+    navigate("/login",{
+            state : {
+                pageInfo: {
+                    currentPage: 'Login'
+                }
+            },
+
+        });
   };
   const onRegisterClicked = () => {
-    navigate("/register");
+    navigate("/register",{
+            state : {
+                pageInfo: {
+                    currentPage: 'Register'
+                }
+            },
+
+        });
   };
   const onLogOutClicked = () => {
     someValueUpdate(userObj);
