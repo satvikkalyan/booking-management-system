@@ -1,12 +1,10 @@
 import "./datatable.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { deleteItem, checkoutUser } from "../../utility/fetchCalls";
 import { userDeleteAPI, propertyDeleteAPI } from "./../../utility/constants";
 
 const Datatable = (props) => {
-  const [data, setData] = useState(props.props.data);
   const navigate = useNavigate();
   var entity = "Users";
   if (props.props.entity === "Properties") {
@@ -23,8 +21,6 @@ const Datatable = (props) => {
         ? propertyDeleteAPI
         : null;
     deleteItem(URL, id).then((data) => {
-      console.log("Element Deleted");
-      // window.location.reload();
       navigate("/");
     });
   };
@@ -32,7 +28,7 @@ const Datatable = (props) => {
   const handleCheckout = (id) => {
     var bookingID = "";
     for (var x = 0; x < props.props.data.length; x++) {
-      if (id == props.props.data[x].id) {
+      if (id === props.props.data[x].id) {
         bookingID = props.props.data[x].bookingTimestamp;
         break;
       }
@@ -46,12 +42,13 @@ const Datatable = (props) => {
     }
   };
   const handleOnClick = (id) => {
-    if (props.props.entity == "Profile" || props.props.entity=="OS-DB") {
+    let x;
+    if (props.props.entity === "Profile" || props.props.entity==="OS-DB") {
       if (props?.props.data?.length > 0) {
         const items = props?.props.data;
         var finalItem = {};
-        for (var x = 0; x < items?.length; x++) {
-          if (items[x].id == id) {
+        for (x = 0; x < items?.length; x++) {
+          if (items[x].id === id) {
             finalItem = items[x];
           }
         }
@@ -74,7 +71,7 @@ const Datatable = (props) => {
     } else {
       const data = props.props.data;
       var currentItem = undefined;
-      for (var x = 0; x < data.length; x++) {
+      for (x = 0; x < data.length; x++) {
         if (data[x].id === id) {
           currentItem = data[x];
           break;

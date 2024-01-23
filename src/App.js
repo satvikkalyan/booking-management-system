@@ -21,7 +21,7 @@ import FeedBack from "./pages/user-pages/feedback/feedback";
 import Payments from "./components/user-components/payments/Payments";
 import ConfirmationPage from "./components/user-components/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
-import NavBar from "./components/common-components/navbarnew/Navbar";
+import NavBar from "./components/common-components/nav-bar/Navbar";
 import React, {useEffect, useState} from "react";
 import Header from "./components/user-components/header/Header";
 import SearchBar from "./components/common-components/search-bar/searchBar";

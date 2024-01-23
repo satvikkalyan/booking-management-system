@@ -46,7 +46,6 @@ const Hotel = () => {
 
   const handleReserve = () => {
     if (!isUserLoggedIn(userDetails)) {
-      console.log("Modal Set True")
       setShowModal(true);
     } else {
       navigate("/errorPage");
