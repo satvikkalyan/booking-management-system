@@ -19,7 +19,7 @@ import AddNewProperty from "./pages/admin-pages/list/properties/addproperties/ad
 import AddNewPromotions from "./pages/admin-pages/list/promotions/addpromotions/addNewPromotions";
 import FeedBack from "./pages/user-pages/feedback/feedback";
 import Payments from "./components/user-components/payments/Payments";
-import ConfirmationPage from "./components/user-components/confirmationPage/ConfirmationPage";
+import ConfirmationPage from "./pages/user-pages/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
 import NavBar from "./components/common-components/nav-bar/Navbar";
 import React, {useEffect, useState} from "react";
