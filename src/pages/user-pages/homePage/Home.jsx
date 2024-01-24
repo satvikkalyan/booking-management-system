@@ -1,4 +1,4 @@
-import "./home.css";
+import "./Home.css";
 import React from "react";
 import PropertiesByCities from "../../../components/user-components/propertyByCity/PropertiesByCities";
 import PropertiesByTypes from "../../../components/user-components/propertiesByType/PropertiesByTypes";

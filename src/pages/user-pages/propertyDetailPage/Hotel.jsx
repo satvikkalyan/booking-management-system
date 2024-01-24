@@ -1,4 +1,4 @@
-import "./hotel.css";
+import "./PropertyDetail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,

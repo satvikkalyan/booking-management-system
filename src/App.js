@@ -1,14 +1,14 @@
 import "./App.css";
 import {Route, Routes, useLocation} from "react-router-dom";
-import {Home} from "./pages/user-pages/home/Home";
-import {FilteredProperties} from "./pages/user-pages/filteredProperties/FilteredProperties";
-import Hotel from "./pages/user-pages/hotel/Hotel";
+import {Home} from "./pages/user-pages/homePage/Home";
+import {FilteredProperties} from "./pages/user-pages/propertiesListPage/FilteredProperties";
+import Hotel from "./pages/user-pages/propertyDetailPage/Hotel";
 import Login from "./pages/common-pages/login/Login";
 import Register from "./pages/common-pages/register/Register";
 import ForgotPassword from "./pages/common-pages/forgotpassword/ForgotPassword";
 import {UserDetailsProvider} from "./context/UserContext";
 import Profile from "./pages/common-pages/profile/Profile";
-import AdminHome from "./pages/admin-pages/home/admin-home";
+import AdminHome from "./pages/admin-pages/home/AdminHome";
 import PromotionsList from "./pages/admin-pages/list/promotions/promotionsList";
 import UserList from "./pages/admin-pages/list/users/userList";
 import BookingsList from "./pages/admin-pages/list/bookings/bookingsList";
@@ -17,7 +17,7 @@ import PropertiesList from "./pages/admin-pages/list/properties/propertiesList";
 import AddNewUser from "./pages/admin-pages/list/users/adduser/addNewUser";
 import AddNewProperty from "./pages/admin-pages/list/properties/addproperties/addNewProperty";
 import AddNewPromotions from "./pages/admin-pages/list/promotions/addpromotions/addNewPromotions";
-import FeedBack from "./pages/user-pages/feedback/feedback";
+import Feedback from "./pages/user-pages/feedbackPage/Feedback";
 import Payments from "./components/user-components/payments/Payments";
 import ConfirmationPage from "./pages/user-pages/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
@@ -98,7 +98,7 @@ function App() {
                             path="/admin/Properties/edit/:id"
                             element={<AddNewProperty/>}
                         />
-                        <Route path="/user/feedback" element={<FeedBack/>}/>
+                        <Route path="/user/feedback" element={<Feedback/>}/>
                         <Route path="/errorPage" element={<ErrorPage/>}/>
                     </Routes>
                 </div>

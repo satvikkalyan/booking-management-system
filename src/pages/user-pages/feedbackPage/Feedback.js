@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import "./feedback.css";
+import "./Feedback.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import {
@@ -11,7 +11,7 @@ import {
   FeedBackPageStyle,
 } from "../../../components/utility/constants";
 
-const FeedBack = () => {
+const Feedback = () => {
   const navigate = useNavigate();
   const submitFeedback = ()=>{
     navigate("/")
@@ -34,7 +34,7 @@ const FeedBack = () => {
                       <TextField
                         id="feedback"
                         name="feedback"
-                        label="FeedBack"
+                        label="Feedback"
                         multiline
                         rows={5}
                       />
@@ -73,4 +73,4 @@ const FeedBack = () => {
   );
 };
 
-export default FeedBack;
+export default Feedback;

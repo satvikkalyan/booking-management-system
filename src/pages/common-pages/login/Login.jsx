@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import logo from "../../../resources/images/logo-no-background.png"
 import {useNavigate} from "react-router-dom";
-import {loginUser} from "../../../service/userService";
+import {loginUser} from "../../../service/UserService";
 import {useUpdateLoginDet} from "../../../context/UserContext";
 
 export default function Login() {

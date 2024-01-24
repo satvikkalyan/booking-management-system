@@ -8,7 +8,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import {useNavigate} from "react-router-dom";
 import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
-import {fetchProperties} from "../../../service/propertiesService";
+import {fetchProperties} from "../../../service/PropertiesService";
 
 const SearchBar = () => {
     const today = new Date();

@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import placeholderpic from "../../../resources/images/userprofile.jpeg";
 import Box from "@mui/material/Box";
-import "./profile.css";
+import "./Profile.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import { flex_style, paperStyle,bookingsColumns } from "../../../components/utility/constants";
