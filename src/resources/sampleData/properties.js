@@ -2,7 +2,7 @@ export const properties =
     [
         {
             id:1,
-            img:"https://cf.bstatic.com/xdata/images/hotel/square600/261707778.webp?k=fa6b6128468ec15e81f7d076b6f2473fa3a80c255582f155cae35f9edbffdd78&o=&s=1",
+            image:"https://cf.bstatic.com/xdata/images/hotel/square600/261707778.webp?k=fa6b6128468ec15e81f7d076b6f2473fa3a80c255582f155cae35f9edbffdd78&o=&s=1",
             propertyName: "Tower Street Apartments Boston",
             transportationFacility: "Free airport taxi",
             description:"Studio Apartment with Air conditioning",
@@ -17,7 +17,7 @@ export const properties =
         },
         {
             id:2,
-            img:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
+            image:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
             propertyName: "Hollywood Inn Suites Boston ",
             transportationFacility: "Free airport taxi",
             description:"Studio Apartment with Air conditioning",
@@ -32,7 +32,7 @@ export const properties =
         },
         {
             id:3,
-            img:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
+            image:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
             propertyName: "Hollywood Inn Suites New York",
             transportationFacility: "Free airport taxi",
             description:"Studio Apartment with Air conditioning",
@@ -47,7 +47,7 @@ export const properties =
         },
         {
             id:4,
-            img:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
+            image:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
             propertyName: "Hollywood Inn Suites New York",
             transportationFacility: "Free airport taxi",
             description:"Studio Apartment with Air conditioning",
@@ -62,7 +62,7 @@ export const properties =
         },
         {
             id:5,
-            img:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
+            image:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
             propertyName: "Hollywood Inn Suites Chicago",
             transportationFacility: "Free airport taxi",
             description:"Studio Apartment with Air conditioning",
@@ -78,7 +78,7 @@ export const properties =
         ,
         {
             id:6,
-            img:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
+            image:"https://cf.bstatic.com/xdata/images/hotel/square600/171959516.webp?k=8403dc7b64f23f90debd0aecd117edbaac341da3014a06c1ba3eb0199d04cbd8&o=&s=1",
             propertyName: "Hollywood Inn Suites Chicago",
             transportationFacility: "Free airport taxi",
             description:"Studio Apartment with Air conditioning",

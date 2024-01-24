@@ -1,7 +1,7 @@
 import "./App.css";
 import {Route, Routes, useLocation} from "react-router-dom";
 import {Home} from "./pages/user-pages/homePage/Home";
-import {FilteredProperties} from "./pages/user-pages/propertiesListPage/FilteredProperties";
+import {PropertiesListPage} from "./pages/user-pages/propertiesListPage/PropertiesListPage";
 import PropertyDetail from "./pages/user-pages/propertyDetailPage/PropertyDetail";
 import Login from "./pages/common-pages/login/Login";
 import Register from "./pages/common-pages/register/Register";
@@ -60,7 +60,6 @@ function App() {
                 setDisplaySearchBar(true);
             }
         }
-        console.log("currentPage ", currentPage)
     }, [location?.state?.pageInfo?.currentPage]);
     return (
         <BookingDetailsProvider>
@@ -71,7 +70,7 @@ function App() {
                     {displayHeader && <Header/>}
                     <Routes>
                         <Route path="/" element={<Home/>}/>
-                        <Route path="/hotels" element={<FilteredProperties/>}/>
+                        <Route path="/hotels" element={<PropertiesListPage/>}/>
                         <Route path="/hotels/:id" element={<PropertyDetail/>}/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/register" element={<Register/>}/>

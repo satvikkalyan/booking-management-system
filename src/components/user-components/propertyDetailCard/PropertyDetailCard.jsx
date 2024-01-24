@@ -3,23 +3,26 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../common-components/customButton/CustomButton";
 import React from "react";
+import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
 
 const PropertyDetailCard = (props) => {
   const navigate = useNavigate();
-  const id = props.props.id;
-  const date = props.props.date;
+  const bookingDetails = useBookingDetails()
+  const setBookingDetails = useUpdateBookingDetails()
   const item = props.props.item;
   const handleNavigate = () => {
-    navigate(`/hotels/${item.id}`, {
+      bookingDetails.propertyId = item.propertyId
+      setBookingDetails(bookingDetails)
+    navigate(`/hotels/${item.propertyId}`, {
       state: {
-          id, date, item, pageInfo: {
+          pageInfo: {
           currentPage: 'hotelDetail'
         } },
        });
   };
   return (
     <div className="searchItem">
-      <img src={item.img} alt="" className="siImg" />
+      <img src={item.image} alt="" className="siImg" />
       <div className="siDesc">
         <h1 className="siTitle">{item.propertyName}</h1>
         <span className="siTaxiOp">Free airport taxi</span>

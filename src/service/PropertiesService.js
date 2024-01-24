@@ -4,7 +4,6 @@ const propertiesAPI = `${BASE_URL}/api/v1/properties`;
 
 export const fetchProperties = async (data) => {
     try {
-        console.log(data)
         const response = await fetch(`${propertiesAPI}/search`, {
             method: 'POST',
             headers: {
