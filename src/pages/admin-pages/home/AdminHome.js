@@ -1,5 +1,5 @@
 import Sidebar from "./../../../components/admin-components/sidebar/Sidebar";
-import "./admin-home.css";
+import "./AdminHome.css";
 import Widget from "./../../../components/admin-components/widget/Widget";
 const AdminHome = () => {
   return (

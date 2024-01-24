@@ -1,4 +1,4 @@
-import "./hotel.css";
+import "./PropertyDetail.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -7,9 +7,8 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
-import BedSelection from "../../../components/user-components/bedSelectionModal/BedSelection";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useLoginDet } from "../../../UserContext";
+import { useLoginDet } from "../../../context/UserContext";
 import {
   isUserLoggedIn,
   getNumberOfDays,
@@ -17,7 +16,7 @@ import {
 import Maps from "../../../components/user-components/Maps/Maps";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
 import BedSelectionModal from "../../../components/user-components/bedSelectionPopup/bedSelectionModal";
-const Hotel = () => {
+const PropertyDetail = () => {
   const userDetails = useLoginDet();
   const [slideNumber, setSlideNumber] = useState(0);
   const navigate = useNavigate();
@@ -47,7 +46,6 @@ const Hotel = () => {
 
   const handleReserve = () => {
     if (!isUserLoggedIn(userDetails)) {
-      console.log("Modal Set True")
       setShowModal(true);
     } else {
       navigate("/errorPage");
@@ -157,4 +155,4 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+export default PropertyDetail;

@@ -9,4 +9,5 @@
 
 .main-div{
     background-color: var(--primary-color);
+    height: 100%;
 }

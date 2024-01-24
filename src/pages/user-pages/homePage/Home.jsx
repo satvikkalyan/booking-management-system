@@ -1,12 +1,9 @@
-import "./home.css";
+import "./Home.css";
 import React from "react";
-import Header from "../../../components/user-components/header/Header";
 import PropertiesByCities from "../../../components/user-components/propertyByCity/PropertiesByCities";
 import PropertiesByTypes from "../../../components/user-components/propertiesByType/PropertiesByTypes";
 import SponsoredProperties from "../../../components/user-components/sponsoredProperties/SponsoredProperties"
 import MailList from "../../../components/user-components/mailList/MailList";
-import NavBar from "../../../components/common-components/navbarnew/Navbar";
-import SearchBar from "../../../components/common-components/search-bar/searchBar";
 export const Home = () => {
   return (
     <div>

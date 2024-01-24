@@ -295,10 +295,10 @@ export default function AddNewProperty() {
                       <td>
                         <Box sx={flex_style}>
                           <TextField
-                            id="roomFacilities"
-                            name="roomFacilities"
+                            id="propertyFacilities"
+                            name="propertyFacilities"
                             label="Room Facilities"
-                            value={property?.roomFacilities}
+                            value={property?.propertyFacilities}
                             onChange={handleListener}
                           />
                         </Box>

@@ -1,5 +1,6 @@
 import placeholderpic from "./../../resources/images/userprofile.jpeg"
 const API = `http://localhost:8081`
+export const BASE_URL = `http://localhost:8080`
 export const userAPI = `${API}/api/v1/users/`;
 export const roomsCountAPI = `${API}/api/v1/admins/roomscount/`;
 export const usersCountAPI =
@@ -15,28 +16,24 @@ export const propertyDeleteAPI = `${API}/api/v1/properties/delete/`
 export const promotionsAPI = `${API}/api/v1/promotions/`
 export const checkoutAPI = `${API}/api/v1/bookings/checkout/`
 export const userObj = {
+  userID:"",
   firstName: "",
   lastName: "",
   email: "",
   password: "",
-  mobile: "",
-  address: "",
-  profileImageUrl: "",
-  userRating: "",
-  gender: "",
-  dateOfBirth: "2022-11-20",
-  cardDetailsResourceList: [
-    {
-      cardNumber: new Date().getTime(),
-      cardName: "",
-      cardExpiry: "",
-    },
-  ],
-  bookingResources: [],
-  customer: true,
-  management: false,
-  onSiteEmployee: false,
-  customerSupportTeam: false,
+  bookings: [],
+};
+
+export const bookingObj = {
+  propertyID: "",
+  fromDate: "",
+  toDate: "",
+  paymentInformation:{},
+  user: null,
+  rooms: [],
+  adults: 0,
+  destination: "",
+  properties: []
 };
 
 export const hotelDataTemplate = {
@@ -273,7 +270,7 @@ export const promotionsCol = [
       return (
         <div className={`cellWithStatus ${activeStatus}`}>
           {params.row?.promotionTitle?.length>0  && <>Active</>}
-          {params.row?.promotionTitle?.length==0 && <>Inactive</>}
+          {params.row?.promotionTitle?.length===0 && <>Inactive</>}
         </div>
       );
     },
@@ -423,7 +420,7 @@ export const propertyTemplate =
 
     ],
     "description": "",
-    "roomFacilities": "",
+    "propertyFacilities": "",
     "availableFrom": "",
     "availableTo": "",
     "descriptionTitle": "",

@@ -8,7 +8,14 @@ import { Button } from "@mui/material";
 function ErrorPage() {
   const navigate = useNavigate();
   const navigateTohomePage = () => {
-    navigate("/login");
+    navigate("/login",{
+            state : {
+                pageInfo: {
+                    currentPage: 'Login'
+                }
+            },
+
+        });
   };
   return (
     <Grid align="center">
