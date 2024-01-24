@@ -5,18 +5,17 @@ import {properties} from "../../../resources/sampleData/properties";
 import SearchItem from "../../../components/user-components/searchItem/SearchItem";
 import TextField from "@mui/material/TextField";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
+import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
 
 export const FilteredProperties = () => {
-    const location = useLocation();
+    const location = useLocation()
     const navigate = useNavigate()
-    const [destination, setDestination] = useState(location?.state?.destination);
-    const [newDestination, setNewDestination] = useState("");
-    const [newProps, setNewProps] = useState(properties);
+    const bookingDetails = useBookingDetails()
+    // const filteredProperties = properties
+    // const properties = bookingDetails?.properties
     const [date, setDate] = useState([null]);
     const [searchData] = useState(location?.state);
-    const filteredProps = newProps
     const [openDate, setOpenDate] = useState(false);
-
     useEffect(()=>
         {
             //API CAll to Get Properties
@@ -24,7 +23,7 @@ export const FilteredProperties = () => {
         },[]
     )
     const handleSearch = () => {
-        setDestination(newDestination);
+
     };
     return (
         <div className={"hotels-view-container"}>
@@ -98,11 +97,11 @@ export const FilteredProperties = () => {
             <div className={"hotels-display-container"}>
                 <div className="listContainer">
                         <div className="listResult">
-                            {filteredProps.length > 0 &&
-                                filteredProps.map((item, index) => {
+                            {properties.length > 0 &&
+                                properties.map((item, index) => {
                                     return <SearchItem props={{"item": item, "date": date}} key={item.id}/>;
                                 })}
-                            {filteredProps.length === 0 && (
+                            {properties.length === 0 && (
                                 <>
                                     <table>
                                         <tbody>

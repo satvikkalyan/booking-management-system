@@ -56,14 +56,18 @@ const SearchBar = () => {
             toDateError: false,
         });
 
-
         bookingDetails.fromDate = fromDate
         bookingDetails.toDate = toDate
         bookingDetails.adult = adult
         bookingDetails.destination = destination
-        bookingDetails.properties = await fetchProperties({destination, fromDate, toDate, adult});
-        setBookingDetails(bookingDetails)
+        bookingDetails.properties = await fetchProperties({
+            "destination": destination,
+            "startDate": fromDate,
+            "endDate": toDate,
+            "numberOfBeds": adult
+        })
         if (fromDateObj <= toDateObj) {
+            setBookingDetails(bookingDetails)
             navigate("/hotels", {
                 state: {
                     pageInfo: {
