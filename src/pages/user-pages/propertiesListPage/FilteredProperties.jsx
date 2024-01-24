@@ -2,7 +2,7 @@ import "./filteredProperties.css";
 import {useLocation, useNavigate} from "react-router-dom";
 import React, {useState, useEffect} from "react";
 import {properties} from "../../../resources/sampleData/properties";
-import SearchItem from "../../../components/user-components/searchItem/SearchItem";
+import PropertyDetailCard from "../../../components/user-components/propertyDetailCard/PropertyDetailCard";
 import TextField from "@mui/material/TextField";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
 import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
@@ -12,7 +12,7 @@ export const FilteredProperties = () => {
     const navigate = useNavigate()
     const bookingDetails = useBookingDetails()
     // const filteredProperties = properties
-    // const properties = bookingDetails?.properties
+    const properties = bookingDetails?.properties
     const [date, setDate] = useState([null]);
     const [searchData] = useState(location?.state);
     const [openDate, setOpenDate] = useState(false);
@@ -99,7 +99,7 @@ export const FilteredProperties = () => {
                         <div className="listResult">
                             {properties.length > 0 &&
                                 properties.map((item, index) => {
-                                    return <SearchItem props={{"item": item, "date": date}} key={item.id}/>;
+                                    return <PropertyDetailCard props={{"item": item, "date": date}} key={item.id}/>;
                                 })}
                             {properties.length === 0 && (
                                 <>

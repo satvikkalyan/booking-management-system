@@ -420,7 +420,7 @@ export const propertyTemplate =
 
     ],
     "description": "",
-    "roomFacilities": "",
+    "propertyFacilities": "",
     "availableFrom": "",
     "availableTo": "",
     "descriptionTitle": "",

@@ -1,10 +1,10 @@
-import "./searchItem.css";
+import "./PropertyDetailCard.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../common-components/customButton/CustomButton";
 import React from "react";
 
-const SearchItem = (props) => {
+const PropertyDetailCard = (props) => {
   const navigate = useNavigate();
   const id = props.props.id;
   const date = props.props.date;
@@ -22,10 +22,10 @@ const SearchItem = (props) => {
       <img src={item.img} alt="" className="siImg" />
       <div className="siDesc">
         <h1 className="siTitle">{item.propertyName}</h1>
-        <span className="siTaxiOp">{item.transportationFacility}</span>
+        <span className="siTaxiOp">Free airport taxi</span>
         <span className="siSubtitle">{item.description}</span>
-        <span className="siFeatures">{item.roomFacilities}</span>
-        <span className="siCancelOp">{item.cancellationOptions}</span>
+        <span className="siFeatures">{item.propertyFacilities}</span>
+        <span className="siCancelOp">Free Cancellation</span>
         {item.cancellationOptions === "Free Cancellation" && (
           <span className="siCancelOpSubtitle">
             You can cancel later, so lock in this great price today!
@@ -47,4 +47,4 @@ const SearchItem = (props) => {
   );
 };
 
-export default SearchItem;
+export default PropertyDetailCard;

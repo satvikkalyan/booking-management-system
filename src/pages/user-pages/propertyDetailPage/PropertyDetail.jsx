@@ -16,7 +16,7 @@ import {
 import Maps from "../../../components/user-components/Maps/Maps";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
 import BedSelectionModal from "../../../components/user-components/bedSelectionPopup/bedSelectionModal";
-const Hotel = () => {
+const PropertyDetail = () => {
   const userDetails = useLoginDet();
   const [slideNumber, setSlideNumber] = useState(0);
   const navigate = useNavigate();
@@ -155,4 +155,4 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+export default PropertyDetail;

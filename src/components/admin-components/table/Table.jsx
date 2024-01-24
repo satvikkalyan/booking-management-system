@@ -86,7 +86,7 @@ const List = () => {
         <TableHead>
           <TableRow>
             <TableCell className="tableCell">User ID</TableCell>
-            <TableCell className="tableCell">Hotel</TableCell>
+            <TableCell className="tableCell">Property</TableCell>
             <TableCell className="tableCell">Customer</TableCell>
             <TableCell className="tableCell">Date</TableCell>
             <TableCell className="tableCell">Amount</TableCell>
