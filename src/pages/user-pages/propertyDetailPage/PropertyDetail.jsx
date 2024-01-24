@@ -15,7 +15,7 @@ import {
 } from "../../../components/utility/utilityFunctions";
 import Maps from "../../../components/user-components/Maps/Maps";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
-import BedSelectionModal from "../../../components/user-components/bedSelectionPopup/bedSelectionModal";
+import BedSelectionModal from "../../../components/user-components/bedSelectionPopup/BedSelectionModal";
 import {useBookingDetails} from "../../../context/BookingDetails";
 const PropertyDetail = () => {
   const userDetails = useLoginDet();
@@ -131,10 +131,7 @@ const PropertyDetail = () => {
           {showModal && (
               <BedSelectionModal
                   setShowModal={setShowModal}
-                  resource={property?.roomTypeResourceList}
-                  startDate={bookingDetails?.fromDate}
-                  endDate={bookingDetails?.toDate}
-                  hotelData={property}
+                  propertyData={property}
               />
           )}
         </div>

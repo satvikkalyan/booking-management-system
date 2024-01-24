@@ -33,7 +33,8 @@ export const bookingObj = {
   rooms: [],
   adults: 0,
   destination: "",
-  properties: []
+  properties: [],
+  selectedRooms: []
 };
 
 export const hotelDataTemplate = {
