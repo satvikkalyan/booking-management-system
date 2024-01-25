@@ -24,6 +24,5 @@ export const makePayment = async (bookingData, userData)=>{
     } catch (error) {
         console.error('Error Booking:', error.message);
     }
-    console.log(bookingData,userData)
     return null
 }

@@ -38,6 +38,7 @@ const Payments = () => {
         bookingDetails.paymentInformation = paymentData
         setBookingDetails(bookingDetails)
         const paymentResponse = await makePayment(bookingDetails,userDetails)
+        console.log(paymentResponse)
             navigate("/confirm", {
                 state: {
                     pageInfo: {
