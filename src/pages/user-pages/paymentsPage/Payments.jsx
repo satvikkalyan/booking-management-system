@@ -1,10 +1,11 @@
-import "./payments.css";
-import {useLocation, useNavigate} from "react-router-dom";
-import {Fragment, useState, useEffect} from "react";
+import "./Payments.css";
+import {useNavigate} from "react-router-dom";
+import {Fragment, useState} from "react";
 import TextField from "@mui/material/TextField";
 import {useLoginDet} from "../../../context/UserContext";
-import CustomButton from "../../common-components/customButton/CustomButton";
+import CustomButton from "../../../components/common-components/customButton/CustomButton";
 import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
+import {makePayment} from "../../../service/PaymentService";
 
 const Payments = () => {
     const userDetails = useLoginDet();
@@ -33,18 +34,17 @@ const Payments = () => {
         });
     };
     let [isCreditCard, setIsCreditCard] = useState(true);
-    const navigateToConfirmPage = () => {
-        console.log(paymentData)
+    const navigateToConfirmPage = async () => {
         bookingDetails.paymentInformation = paymentData
         setBookingDetails(bookingDetails)
-        navigate("/confirm", {
-            state: {
-                pageInfo: {
-                    currentPage: 'Confirm'
-                }
-            },
-
-        });
+        const paymentResponse = await makePayment(bookingDetails,userDetails)
+            navigate("/confirm", {
+                state: {
+                    pageInfo: {
+                        currentPage: 'Confirm'
+                    }
+                },
+            });
     };
 
     const handleInputChange = (field, value) => {

@@ -1,12 +1,13 @@
 import "./mailList.css";
-import { useNavigate } from "react-router-dom";
-import { postDataToAPI } from "../../utility/fetchCalls";
-import { subscriptionAPI } from "../../utility/constants";
-import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {postDataToAPI} from "../../utility/fetchCalls";
+import {subscriptionAPI} from "../../utility/constants";
+import React, {useState} from "react";
 import CustomButton from "../../common-components/customButton/CustomButton";
 import TextField from "@mui/material/TextField";
 import {InputAdornment} from "@mui/material";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+
 const MailList = () => {
   const [userEmail, setemail] = useState("");
   const navigate = useNavigate();

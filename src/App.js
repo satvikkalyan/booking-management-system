@@ -18,7 +18,7 @@ import AddNewUser from "./pages/admin-pages/list/users/adduser/addNewUser";
 import AddNewProperty from "./pages/admin-pages/list/properties/addproperties/addNewProperty";
 import AddNewPromotions from "./pages/admin-pages/list/promotions/addpromotions/addNewPromotions";
 import Feedback from "./pages/user-pages/feedbackPage/Feedback";
-import Payments from "./components/user-components/payments/Payments";
+import Payments from "./pages/user-pages/paymentsPage/Payments";
 import ConfirmationPage from "./pages/user-pages/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
 import NavBar from "./components/common-components/nav-bar/Navbar";

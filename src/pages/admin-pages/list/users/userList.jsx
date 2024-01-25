@@ -1,10 +1,10 @@
 import "../list.css";
 import Datatable from "../../../../components/admin-components/datatable/Datatable";
 import Sidebar from "../../../../components/admin-components/sidebar/Sidebar";
-import { userColumns } from "../../../../components/utility/constants";
-import { userRows } from "../../../../resources/sampleData/sampleUserData";
-import { useState,useEffect } from "react";
-import { getUsers } from "../../../../components/utility/fetchCalls";
+import {userColumns} from "../../../../components/utility/constants";
+import {useEffect, useState} from "react";
+import {getUsers} from "../../../../components/utility/fetchCalls";
+
 const UserList = () => {
 
   const [users, setusers] = useState([]);

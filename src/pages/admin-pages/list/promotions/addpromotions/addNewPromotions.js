@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import "./addNewPromotions.css";
 import Button from "@mui/material/Button";
-import { useLocation, useNavigate } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import Box from "@mui/material/Box";
 import {
-  flex_style,
-  paperStyle4,
+    flex_style,
+    getPromotionsDataTemplate,
+    paperStyle4,
+    promotionsAPI,
 } from "../../../../../components/utility/constants";
 import Sidebar from "../../../../../components/admin-components/sidebar/Sidebar";
-import { promotionsAPI } from "../../../../../components/utility/constants";
-import { postDataToAPI } from "../../../../../components/utility/fetchCalls";
-import { getPromotionsDataTemplate } from "../../../../../components/utility/constants";
+import {postDataToAPI} from "../../../../../components/utility/fetchCalls";
+
 export default function AddNewPromotions() {
   const navigate = useNavigate();
   const location = useLocation();

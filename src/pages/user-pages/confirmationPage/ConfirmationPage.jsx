@@ -1,13 +1,9 @@
-import React, { useState, useRef } from "react";
-import { useWindowSize } from "react-use";
+import React, {useRef, useState} from "react";
+import {useWindowSize} from "react-use";
 import Confetti from "react-confetti";
-import Grid from "@mui/material/Grid";
 import "./ConfirmationPage.css";
-import Paper from "@mui/material/Paper";
-import { paperStyle } from "../../../components/utility/constants";
-import Button from "@mui/material/Button";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useLoginDet } from "../../../context/UserContext";
+import {useNavigate} from "react-router-dom";
+import {useLoginDet} from "../../../context/UserContext";
 import QRCode from "react-qr-code";
 import ReactToPrint from "react-to-print";
 import {useBookingDetails} from "../../../context/BookingDetails";

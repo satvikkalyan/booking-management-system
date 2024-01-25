@@ -4,6 +4,7 @@ import PropertiesByCities from "./propertyByCity/PropertiesByCities";
 import PropertiesByTypes from "./propertiesByType/PropertiesByTypes";
 import SponsoredProperties from "../../../components/user-components/sponsoredProperties/SponsoredProperties"
 import MailList from "../../../components/user-components/mailList/MailList";
+
 export const Home = () => {
   return (
     <div>

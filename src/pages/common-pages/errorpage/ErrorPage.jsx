@@ -1,10 +1,11 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import { paperStyle2 } from "../../../components/utility/constants";
-import { useNavigate } from "react-router-dom";
+import {paperStyle2} from "../../../components/utility/constants";
+import {useNavigate} from "react-router-dom";
 import "./ErrorPage.css";
-import { Button } from "@mui/material";
+import {Button} from "@mui/material";
+
 function ErrorPage() {
   const navigate = useNavigate();
   const navigateTohomePage = () => {

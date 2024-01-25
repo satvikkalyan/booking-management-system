@@ -1,19 +1,17 @@
 import "./PropertiesListPage.css";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import React, {useState} from "react";
 import {properties} from "../../../resources/sampleData/properties";
 import PropertyDetailCard from "../../../components/user-components/propertyDetailCard/PropertyDetailCard";
 import TextField from "@mui/material/TextField";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
-import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
+import {useBookingDetails} from "../../../context/BookingDetails";
 
 export const PropertiesListPage = () => {
     const navigate = useNavigate()
     const bookingDetails = useBookingDetails()
     const [filteredProperties, setFilteredProperties] = useState(bookingDetails?.properties);
     // const [filteredProperties, setFilteredProperties] = useState(properties);
-    console.log(properties, filteredProperties)
-    const [date, setDate] = useState([null]);
     const [formData, setFormData] = useState({
         minPrice: 1,
         maxPrice: 1000,

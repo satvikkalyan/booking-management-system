@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
@@ -6,16 +6,13 @@ import placeholderpic from "../../../resources/images/userprofile.jpeg";
 import Box from "@mui/material/Box";
 import "./Profile.css";
 import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
-import { flex_style, paperStyle,bookingsColumns } from "../../../components/utility/constants";
-import { useLoginDet } from "../../../context/UserContext";
+import {useNavigate} from "react-router-dom";
+import {bookingsColumns, flex_style, paperStyle} from "../../../components/utility/constants";
+import {useLoginDet} from "../../../context/UserContext";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import Datatable from "../../../components/admin-components/datatable/Datatable";
-import { bookingRows } from "../../../resources/sampleData/sampleBookings";
-import {
-  getProperties,
-  getUsersByEmail,getPromotions
-} from "../../../components/utility/fetchCalls";
+import {getPromotions, getProperties, getUsersByEmail} from "../../../components/utility/fetchCalls";
+
 export default function Profile() {
   const userDetails = useLoginDet();
   const navigate = useNavigate();

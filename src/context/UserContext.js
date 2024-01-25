@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
-import { userObj } from "../components/utility/constants";
+import React, {useContext, useState} from "react";
+import {userObj} from "../components/utility/constants";
+
 const UserDetContext = React.createContext();
 const UserDetUpdateContext = React.createContext();
 

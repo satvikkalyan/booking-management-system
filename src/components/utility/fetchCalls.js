@@ -1,9 +1,5 @@
-import {
-  userAPI,
-  roomsCountAPI,
-  usersCountAPI,
-  propertiesAPI,promotionsAPI,checkoutAPI
-} from "./constants";
+import {checkoutAPI, promotionsAPI, propertiesAPI, roomsCountAPI, userAPI, usersCountAPI} from "./constants";
+
 export const getDataFromAPI = (URL) => {
   return fetch(URL)
     .then(function (response) {

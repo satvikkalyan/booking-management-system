@@ -1,22 +1,15 @@
 import "./PropertyDetail.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-  faCircleXmark,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useLoginDet } from "../../../context/UserContext";
-import {
-  isUserLoggedIn,
-  getNumberOfDays,
-} from "../../../components/utility/utilityFunctions";
-import Maps from "../../../components/user-components/Maps/Maps";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCircleArrowLeft, faCircleArrowRight, faCircleXmark, faLocationDot,} from "@fortawesome/free-solid-svg-icons";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useLoginDet} from "../../../context/UserContext";
+import {getNumberOfDays, isUserLoggedIn,} from "../../../components/utility/utilityFunctions";
+import Maps from "../../../components/user-components/maps/Maps";
 import CustomButton from "../../../components/common-components/customButton/CustomButton";
 import BedSelectionModal from "../../../components/user-components/bedSelectionPopup/BedSelectionModal";
 import {useBookingDetails} from "../../../context/BookingDetails";
+
 const PropertyDetail = () => {
   const userDetails = useLoginDet();
   const [slideNumber, setSlideNumber] = useState(0);

@@ -1,5 +1,6 @@
 import "./propertiesByType.css";
 import PropertyByType from "./PropertyByType";
+
 const PropertiesByTypes = () => {
   const getPropertyListData = () => {
     const data = [

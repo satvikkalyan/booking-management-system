@@ -1,4 +1,5 @@
 import placeholderpic from "./../../resources/images/userprofile.jpeg"
+
 const API = `http://localhost:8081`
 export const BASE_URL = `http://localhost:8080`
 export const userAPI = `${API}/api/v1/users/`;

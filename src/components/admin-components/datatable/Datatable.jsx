@@ -1,8 +1,8 @@
 import "./datatable.css";
-import { DataGrid } from "@mui/x-data-grid";
-import { Link, useNavigate } from "react-router-dom";
-import { deleteItem, checkoutUser } from "../../utility/fetchCalls";
-import { userDeleteAPI, propertyDeleteAPI } from "./../../utility/constants";
+import {DataGrid} from "@mui/x-data-grid";
+import {Link, useNavigate} from "react-router-dom";
+import {checkoutUser, deleteItem} from "../../utility/fetchCalls";
+import {propertyDeleteAPI, userDeleteAPI} from "./../../utility/constants";
 
 const Datatable = (props) => {
   const navigate = useNavigate();

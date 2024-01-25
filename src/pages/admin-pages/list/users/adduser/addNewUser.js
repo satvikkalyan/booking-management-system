@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
@@ -6,15 +6,10 @@ import placeholderpic from "./../../../../../resources/images/userprofile.jpeg";
 import Box from "@mui/material/Box";
 import "./addNewUser.css";
 import Button from "@mui/material/Button";
-import { useLocation, useNavigate } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
-import {
-  paperStyle4,
-  flex_style,
-  userObj,
-  userAPI,
-} from "../../../../../components/utility/constants";
-import { postDataToAPI } from "../../../../../components/utility/fetchCalls";
+import {flex_style, paperStyle4, userAPI, userObj,} from "../../../../../components/utility/constants";
+import {postDataToAPI} from "../../../../../components/utility/fetchCalls";
 import Sidebar from "../../../../../components/admin-components/sidebar/Sidebar";
 
 export default function AddNewUser() {

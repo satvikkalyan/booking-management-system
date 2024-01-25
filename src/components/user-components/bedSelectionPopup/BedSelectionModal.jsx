@@ -3,7 +3,7 @@ import "./BedSelectionModal.css"
 import CustomButton from "../../common-components/customButton/CustomButton";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import SingleBedIcon from '@mui/icons-material/SingleBed';
-import {useLocation, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
 
 const BedSelectionModal = (props) => {
@@ -11,10 +11,10 @@ const BedSelectionModal = (props) => {
     const rooms = propertyData?.availability
     const bookingDetails = useBookingDetails()
     const setBookingDetails = useUpdateBookingDetails()
-    let disabledBeds = []
-    rooms.map(room=>{
-        disabledBeds.push(room.direction+"-bed")
-    })
+    let disabledBeds = [];
+    rooms.forEach(room => {
+        disabledBeds.push(room.direction + "-bed");
+    });
     const [selectedBeds, setSelectedBeds] = useState([]);
     const navigate = useNavigate()
     const handleBedClick = (bedId) => {

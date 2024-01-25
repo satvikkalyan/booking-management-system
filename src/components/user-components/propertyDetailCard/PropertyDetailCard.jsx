@@ -1,6 +1,5 @@
 import "./PropertyDetailCard.css";
-import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import CustomButton from "../../common-components/customButton/CustomButton";
 import React from "react";
 import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";

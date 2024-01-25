@@ -5,11 +5,8 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import "./Feedback.css";
 import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
-import {
-  flex_style,
-  FeedBackPageStyle,
-} from "../../../components/utility/constants";
+import {useNavigate} from "react-router-dom";
+import {FeedBackPageStyle, flex_style,} from "../../../components/utility/constants";
 
 const Feedback = () => {
   const navigate = useNavigate();

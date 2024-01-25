@@ -19,6 +19,7 @@ export const fetchProperties = async (data) => {
         if(response.status===200){
             return response.json()
         }
+        return null;
     } catch (error) {
         console.error('Error fetching properties:', error.message);
     }

@@ -2,10 +2,11 @@ import "./sidebar.css";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import FeedbackIcon from '@mui/icons-material/Feedback';
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
