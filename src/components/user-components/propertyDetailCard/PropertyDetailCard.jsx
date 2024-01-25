@@ -12,6 +12,8 @@ const PropertyDetailCard = (props) => {
   const item = props.props.item;
   const handleNavigate = () => {
       bookingDetails.propertyId = item.propertyId
+      bookingDetails.propertyName  = item.propertyName
+      bookingDetails.propertyAddress  = item.street + ", "+item.city
       setBookingDetails(bookingDetails)
     navigate(`/hotels/${item.propertyId}`, {
       state: {

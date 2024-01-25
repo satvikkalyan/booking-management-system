@@ -35,13 +35,13 @@ function App() {
     useEffect(() => {
         const currentPage = location?.state?.pageInfo?.currentPage
         if (!currentPage) {
-            setDisplayHeader(true);
             setDisplayNavbar(true);
+            setDisplayHeader(true);
             setDisplaySearchBar(true)
         } else {
             if (currentPage === "Home") {
-                setDisplayHeader(true);
                 setDisplayNavbar(true);
+                setDisplayHeader(true);
                 setDisplaySearchBar(true)
             } else if (currentPage === 'Login' || currentPage === 'Register') {
                 setDisplayNavbar(false);
@@ -55,7 +55,13 @@ function App() {
                 setDisplayNavbar(true);
                 setDisplaySearchBar(true)
                 setDisplayHeader(false);
-            } else {
+            }
+            else if(currentPage === 'Confirm'){
+                setDisplayHeader(false)
+                setDisplaySearchBar(false)
+                setDisplayNavbar(true)
+            }
+            else {
                 setDisplayNavbar(true);
                 setDisplaySearchBar(true);
             }
@@ -66,8 +72,8 @@ function App() {
             <UserDetailsProvider>
                 <div className="main-div">
                     {displayNavBar && <NavBar/>}
-                    {displaySearchBar && <SearchBar/>}
                     {displayHeader && <Header/>}
+                    {displaySearchBar && <SearchBar/>}
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/hotels" element={<PropertiesListPage/>}/>

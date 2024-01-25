@@ -34,7 +34,10 @@ export const bookingObj = {
   adults: 0,
   destination: "",
   properties: [],
-  selectedRooms: []
+  selectedRooms: [],
+  propertyName: "",
+  propertyAddress: "",
+
 };
 
 export const hotelDataTemplate = {

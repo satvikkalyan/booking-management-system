@@ -33,7 +33,8 @@ const PropertyDetail = () => {
   );
 
   const handleReserve = () => {
-    if (!isUserLoggedIn(userDetails)) {
+    if (isUserLoggedIn(userDetails)) {
+
       setShowModal(true);
     } else {
       navigate("/errorPage");
@@ -54,6 +55,7 @@ const PropertyDetail = () => {
     }
     setSlideNumber(newSlideNumber);
   };
+
 
   return (
       <div className={"hotel-detail-container"}>
