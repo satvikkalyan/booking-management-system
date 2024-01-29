@@ -3,6 +3,7 @@ import {BASE_URL} from "../components/utility/constants";
 const userAPI = `${BASE_URL}/api/v1/users`;
 
 export const loginUser = async (credentials) => {
+    console.log(credentials)
     try {
         const response = await fetch(`${userAPI}/login`, {
             method: "POST",
