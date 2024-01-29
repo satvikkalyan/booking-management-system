@@ -3,8 +3,9 @@ import Datatable from "../../../../components/admin-components/datatable/Datatab
 import Sidebar from "../../../../components/admin-components/sidebar/Sidebar";
 import {promotionsCol} from "../../../../components/utility/constants";
 import {promotionRows} from "../../../../resources/sampleData/samplePromotionsData";
-import { useEffect, useState } from "react";
-import { getPromotions } from "../../../../components/utility/fetchCalls";
+import {useEffect, useState} from "react";
+import {getPromotions} from "../../../../components/utility/fetchCalls";
+
 const PromotionsList = () => {
   const [promotionsData,setPromotionsData] = useState(promotionRows)
 useEffect(() => {

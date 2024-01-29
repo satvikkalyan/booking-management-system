@@ -1,110 +1,71 @@
-import "./payments.css";
-import {useLocation, useNavigate} from "react-router-dom";
-import {Fragment, useState, useEffect} from "react";
+import "./Payments.css";
+import {useNavigate} from "react-router-dom";
+import {Fragment, useState} from "react";
 import TextField from "@mui/material/TextField";
 import {useLoginDet} from "../../../context/UserContext";
-import {postDataToAPI, getDataFromAPI} from "../../utility/fetchCalls";
-import CustomButton from "../../common-components/customButton/CustomButton";
+import CustomButton from "../../../components/common-components/customButton/CustomButton";
+import {useBookingDetails, useUpdateBookingDetails} from "../../../context/BookingDetails";
+import {makePayment} from "../../../service/PaymentService";
 
 const Payments = () => {
     const userDetails = useLoginDet();
-    let [isCreditCard, setIsCreditCard] = useState(true);
-    const navigateToHomePage = () => {
-        navigate("/");
-    };
-    const location = useLocation();
-    let [bookingDets, setBookingDets] = useState(location.state);
     const navigate = useNavigate();
-    const navigateToConfirmPage = () => {
-        const date = Date.now().toString();
-        const current = bookingDets.fromDate;
-        var currentMonth = current.getMonth() + 1;
-        if (currentMonth < 10) {
-            currentMonth = "0" + currentMonth;
-        }
-        var currentDay = current.getDate();
-        if (currentDay < 10) {
-            currentDay = "0" + currentDay;
-        }
-        const next = bookingDets.toDate;
-        var nextMonth = next.getMonth() + 1;
-        if (nextMonth < 10) {
-            nextMonth = "0" + nextMonth;
-        }
-        var nextDay = next.getDate();
-        if (nextDay < 10) {
-            nextDay = "0" + nextDay;
-        }
-        const bookingJson = {
-            fromDate: `${current.getFullYear()}-${currentMonth}-${currentDay}`,
-            toDate: `${next.getFullYear()}-${nextMonth}-${nextDay}`,
-            occupancy: bookingDets.occupancy,
-            paymentType: isCreditCard ? "Card" : "Cash",
-            roomTypeCount: bookingDets.roomTypeCount,
-            bookingTimestamp: date,
-        };
-
-        const detailsFilled =
-            givenName.length > 0 && lastName.length > 0 && email.length > 0;
-        if (detailsFilled) {
-            if (isCreditCard) {
-                if (
-                    cvv.length == 3 &&
-                    expiryDate.length == 5 &&
-                    cardNumber.length > 5
-                ) {
-                    postDataToAPI(
-                        `https://bms-backend-spring-prelive.herokuapp.com/api/v1/bookings/${userDetails.id}/${bookingDets.hotelData.id}/`,
-                        bookingJson
-                    ).then((data) => {
-                        navigate("/confirm", {
-                            state: {prevState: location.state, bookingJson: bookingJson},
-                        });
-                    });
+    const bookingDetails = useBookingDetails()
+    const setBookingDetails = useUpdateBookingDetails()
+    const transactionId = Date.now().toString()
+    const [paymentData, setPaymentData] = useState({
+        transactionId: transactionId,
+        isCreditCard: true,
+        givenName: userDetails?.firstName || "",
+        lastName: userDetails?.lastName || "",
+        cardNumber: "",
+        expiryDate: "",
+        cvv: "",
+        email: userDetails?.email || "",
+    });
+    const navigateToHomePage = () => {
+        navigate("/", {
+            state: {
+                pageInfo: {
+                    currentPage: 'Home'
                 }
-            } else {
-                postDataToAPI(
-                    `https://bms-backend-spring-prelive.herokuapp.com/api/v1/bookings/${userDetails.id}/${bookingDets.hotelData.id}/`,
-                    bookingJson
-                ).then((data) => {
-                    navigate("/confirm", {
-                        state: {prevState: location.state, bookingJson: bookingJson},
-                    });
-                });
-            }
-        }
+            },
+
+        });
     };
-    const [givenName, setGivenName] = useState(userDetails?.firstName);
-    const [lastName, setLastName] = useState(userDetails?.firstName);
-    const [cardNumber, setCardNumber] = useState(
-        userDetails?.cardDetailsResourceList[0]?.cardNumber
-    );
-    const [expiryDate, setExpiryDate] = useState(
-        userDetails?.cardDetailsResourceList[0]?.cardExpiry
-    );
-    const [cvv, setCVV] = useState(userDetails?.cardDetailsResourceList[0]?.cvv);
-    const [email, setEmail] = useState(userDetails?.email);
-    const handleGivenNameChange = (e) => {
-        setGivenName(e.target.value);
-    };
-    const handleLastNameChange = (e) => {
-        setLastName(e.target.value);
-    };
-    const handleCardNumberChange = (e) => {
-        setCardNumber(e.target.value);
-    };
-    const handleExpiryChange = (e) => {
-        setExpiryDate(e.target.value);
-    };
-    const handleCVVChange = (e) => {
-        setCVV(e.target.value);
-    };
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
+    let [isCreditCard, setIsCreditCard] = useState(true);
+    const navigateToConfirmPage = async () => {
+        bookingDetails.paymentInformation = paymentData
+        setBookingDetails(bookingDetails)
+        const paymentResponse = await makePayment(bookingDetails,userDetails)
+        console.log(paymentResponse)
+            navigate("/confirm", {
+                state: {
+                    pageInfo: {
+                        currentPage: 'Confirm'
+                    }
+                },
+            });
     };
 
+    const handleInputChange = (field, value) => {
+        setPaymentData((prevData) => ({
+            ...prevData,
+            [field]: value,
+        }));
+    };
     const labelStyles = {
-        fontSize: '12px',
+        fontSize: "12px",
+    };
+
+    const isRequiredFieldsEmpty = () => {
+        const requiredFields = ["givenName", "lastName", "email"];
+
+        if (isCreditCard) {
+            requiredFields.push("cardNumber", "cvv", "expiryDate");
+        }
+
+        return requiredFields.some((field) => !paymentData[field]?.length);
     };
 
     return (
@@ -120,8 +81,8 @@ const Payments = () => {
                                 label="Given Name"
                                 variant="outlined"
                                 fullWidth
-                                value={givenName}
-                                onChange={handleGivenNameChange}
+                                value={paymentData.givenName}
+                                onChange={(e) => handleInputChange("givenName", e.target.value)}
                                 InputLabelProps={{
                                     style: labelStyles,
                                 }}
@@ -134,8 +95,8 @@ const Payments = () => {
                                 label="Last Name"
                                 variant="outlined"
                                 fullWidth
-                                value={lastName}
-                                onChange={handleLastNameChange}
+                                value={paymentData.lastName}
+                                onChange={(e) => handleInputChange("lastName", e.target.value)}
                                 InputLabelProps={{
                                     style: labelStyles,
                                 }}
@@ -148,8 +109,8 @@ const Payments = () => {
                                 label="Email"
                                 variant="outlined"
                                 fullWidth
-                                value={email}
-                                onChange={handleEmailChange}
+                                value={paymentData.email}
+                                onChange={(e) => handleInputChange("email", e.target.value)}
                                 InputLabelProps={{
                                     style: labelStyles,
                                 }}
@@ -201,8 +162,8 @@ const Payments = () => {
                                         label="Card Number"
                                         variant="outlined"
                                         fullWidth
-                                        value={cardNumber}
-                                        onChange={handleCardNumberChange}
+                                        value={paymentData.cardNumber}
+                                        onChange={(e) => handleInputChange("cardNumber", e.target.value)}
                                         InputLabelProps={{
                                             style: labelStyles,
                                         }}
@@ -214,8 +175,8 @@ const Payments = () => {
                                         id="outlined-basic"
                                         label="CVV"
                                         variant="outlined"
-                                        value={cvv}
-                                        onChange={handleCVVChange}
+                                        value={paymentData.cvv}
+                                        onChange={(e) => handleInputChange("cvv", e.target.value)}
                                         InputLabelProps={{
                                             style: labelStyles,
                                         }}
@@ -223,9 +184,9 @@ const Payments = () => {
                                     /> <TextField
                                     id="outlined-basic"
                                     label="Expiry Date"
-                                    value={expiryDate}
                                     variant="outlined"
-                                    onChange={handleExpiryChange}
+                                    value={paymentData.expiryDate}
+                                    onChange={(e) => handleInputChange("expiryDate", e.target.value)}
                                     InputLabelProps={{
                                         style: labelStyles,
                                     }}
@@ -238,8 +199,12 @@ const Payments = () => {
                     <div className="row">
                         <div className="button-group">
                             <div className="flex-child magenta">
-                                <CustomButton  className={"payment-submit"} buttonName={"Continue"}
-                                              onClick={navigateToConfirmPage}/>
+                                <CustomButton
+                                    disabled={isRequiredFieldsEmpty()}
+                                    className={"payment-submit"}
+                                    buttonName={"Continue"}
+                                    onClick={navigateToConfirmPage}
+                                />
                             </div>
                             <div className="flex-child green">
                                 <CustomButton className={"payment-cancel"} buttonName={"Cancel"}

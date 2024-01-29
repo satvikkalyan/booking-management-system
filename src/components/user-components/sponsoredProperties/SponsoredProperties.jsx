@@ -1,5 +1,6 @@
 import "./sponsoredProperties.css";
 import SponsoredProperty from "./SponsoredProperty";
+
 const SponsoredProperties = () => {
   const getFeaturedPropertiesData = () => {
     const data = [

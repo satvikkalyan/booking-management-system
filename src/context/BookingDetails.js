@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
-import { bookingObj } from "../components/utility/constants";
+import React, {useContext, useState} from "react";
+import {bookingObj} from "../components/utility/constants";
+
 const BookingDetailsContext = React.createContext();
 const BookingDetailsUpdateContext = React.createContext();
 

@@ -1,11 +1,7 @@
-import { Button } from "@mui/material";
-import {
-  useJsApiLoader,
-  GoogleMap,
-  Marker,
-  DirectionsRenderer,
-} from "@react-google-maps/api";
-import { useState } from "react";
+import {Button} from "@mui/material";
+import {DirectionsRenderer, GoogleMap, Marker, useJsApiLoader,} from "@react-google-maps/api";
+import {useState} from "react";
+
 export default function Maps(props) {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: "AIzaSyCgCjQGHvClI594K5S5PT9_Dvzq6cNMe2s",

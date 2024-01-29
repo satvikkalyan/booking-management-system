@@ -18,10 +18,15 @@ export const isUserLoggedIn = (userDetails) => {
   return userDetails?.email?.length > 0;
 };
 
-export const getNumberOfDays = (fromDate, toDate) => {
-  let difference = fromDate?.getTime() - toDate?.getTime();
-  const TotalDays = Math.ceil(difference / (1000 * 3600 * 24)) + 1;
-  return TotalDays;
+export const getNumberOfDays = (fromDateString, toDateString) => {
+  const fromDate = new Date(fromDateString);
+  const toDate = new Date(toDateString);
+  if (isNaN(toDate.getTime()) || isNaN(fromDate.getTime())) {
+    console.error("Invalid date format");
+    return null;
+  }
+  let difference = toDate.getTime() - fromDate.getTime();
+  return Math.ceil(difference / (1000 * 3600 * 24)) + 1;
 };
 
 export const generateTemplate = (roomData) => {

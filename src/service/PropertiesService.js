@@ -4,7 +4,6 @@ const propertiesAPI = `${BASE_URL}/api/v1/properties`;
 
 export const fetchProperties = async (data) => {
     try {
-        console.log(data)
         const response = await fetch(`${propertiesAPI}/search`, {
             method: 'POST',
             headers: {
@@ -20,6 +19,7 @@ export const fetchProperties = async (data) => {
         if(response.status===200){
             return response.json()
         }
+        return null;
     } catch (error) {
         console.error('Error fetching properties:', error.message);
     }

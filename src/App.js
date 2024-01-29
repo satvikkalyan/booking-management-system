@@ -1,7 +1,7 @@
 import "./App.css";
 import {Route, Routes, useLocation} from "react-router-dom";
 import {Home} from "./pages/user-pages/homePage/Home";
-import {FilteredProperties} from "./pages/user-pages/propertiesListPage/FilteredProperties";
+import {PropertiesListPage} from "./pages/user-pages/propertiesListPage/PropertiesListPage";
 import PropertyDetail from "./pages/user-pages/propertyDetailPage/PropertyDetail";
 import Login from "./pages/common-pages/login/Login";
 import Register from "./pages/common-pages/register/Register";
@@ -18,7 +18,7 @@ import AddNewUser from "./pages/admin-pages/list/users/adduser/addNewUser";
 import AddNewProperty from "./pages/admin-pages/list/properties/addproperties/addNewProperty";
 import AddNewPromotions from "./pages/admin-pages/list/promotions/addpromotions/addNewPromotions";
 import Feedback from "./pages/user-pages/feedbackPage/Feedback";
-import Payments from "./components/user-components/payments/Payments";
+import Payments from "./pages/user-pages/paymentsPage/Payments";
 import ConfirmationPage from "./pages/user-pages/confirmationPage/ConfirmationPage";
 import ErrorPage from "./pages/common-pages/errorpage/ErrorPage";
 import NavBar from "./components/common-components/nav-bar/Navbar";
@@ -35,13 +35,13 @@ function App() {
     useEffect(() => {
         const currentPage = location?.state?.pageInfo?.currentPage
         if (!currentPage) {
-            setDisplayHeader(true);
             setDisplayNavbar(true);
+            setDisplayHeader(true);
             setDisplaySearchBar(true)
         } else {
             if (currentPage === "Home") {
-                setDisplayHeader(true);
                 setDisplayNavbar(true);
+                setDisplayHeader(true);
                 setDisplaySearchBar(true)
             } else if (currentPage === 'Login' || currentPage === 'Register') {
                 setDisplayNavbar(false);
@@ -55,23 +55,28 @@ function App() {
                 setDisplayNavbar(true);
                 setDisplaySearchBar(true)
                 setDisplayHeader(false);
-            } else {
+            }
+            else if(currentPage === 'Confirm'){
+                setDisplayHeader(false)
+                setDisplaySearchBar(false)
+                setDisplayNavbar(true)
+            }
+            else {
                 setDisplayNavbar(true);
                 setDisplaySearchBar(true);
             }
         }
-        console.log("currentPage ", currentPage)
     }, [location?.state?.pageInfo?.currentPage]);
     return (
         <BookingDetailsProvider>
             <UserDetailsProvider>
                 <div className="main-div">
                     {displayNavBar && <NavBar/>}
-                    {displaySearchBar && <SearchBar/>}
                     {displayHeader && <Header/>}
+                    {displaySearchBar && <SearchBar/>}
                     <Routes>
                         <Route path="/" element={<Home/>}/>
-                        <Route path="/hotels" element={<FilteredProperties/>}/>
+                        <Route path="/hotels" element={<PropertiesListPage/>}/>
                         <Route path="/hotels/:id" element={<PropertyDetail/>}/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/register" element={<Register/>}/>

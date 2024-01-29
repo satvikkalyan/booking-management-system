@@ -1,13 +1,10 @@
 import "./../list.css";
 import Datatable from "../../../../components/admin-components/datatable/Datatable";
 import Sidebar from "../../../../components/admin-components/sidebar/Sidebar";
-import { bookingsColumns } from "../../../../components/utility/constants";
-import { bookingRows } from "../../../../resources/sampleData/sampleBookings";
-import { useEffect, useState } from "react";
-import {
-  getProperties,
-  getUsers,
-} from "../../../../components/utility/fetchCalls";
+import {bookingsColumns} from "../../../../components/utility/constants";
+import {useEffect, useState} from "react";
+import {getProperties, getUsers,} from "../../../../components/utility/fetchCalls";
+
 const BookingsList = () => {
   const [bookingData, setBookingData] = useState({});
   useEffect(() => {

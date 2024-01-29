@@ -1,11 +1,9 @@
 import "./widget.css";
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import {
-  getRoomsCount,
-  getCustomersCount,
-} from "./../../utility/fetchCalls";
+import {getCustomersCount, getRoomsCount,} from "./../../utility/fetchCalls";
+
 const Widget = ({ type }) => {
   let data;
   const [roomCount, setRoomcount] = useState(null);

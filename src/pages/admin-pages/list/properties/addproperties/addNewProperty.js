@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import "./addNewProperty.css";
 import Button from "@mui/material/Button";
-import { useLocation, useNavigate } from "react-router-dom";
-import {
-  flex_style,
-  paperStyle5,
-  propertyTemplate,
-} from "../../../../../components/utility/constants";
+import {useLocation, useNavigate} from "react-router-dom";
+import {flex_style, paperStyle5, propertyTemplate,} from "../../../../../components/utility/constants";
 import Sidebar from "../../../../../components/admin-components/sidebar/Sidebar";
-import { postPropData } from "../../../../../components/utility/fetchCalls";
+import {postPropData} from "../../../../../components/utility/fetchCalls";
+
 export default function AddNewProperty() {
   const navigate = useNavigate();
   const navigateToHomePage = () => {

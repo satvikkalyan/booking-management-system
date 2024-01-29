@@ -3,10 +3,7 @@ import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import TextField from "@mui/material/TextField";
-import {
-  paperStyle,
-  avatarStyle,
-} from "../../../components/utility/constants";
+import {avatarStyle, paperStyle,} from "../../../components/utility/constants";
 
 export default function ForgotPassword() {
   return (

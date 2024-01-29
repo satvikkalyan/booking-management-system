@@ -7,6 +7,7 @@ import image2 from "./../../../resources/images/wallpaper2.jpeg"
 import image3 from "./../../../resources/images/wallpaper3.jpeg"
 import image4 from "./../../../resources/images/wallpaper4.jpeg"
 import image5 from "./../../../resources/images/wallpaper5.jpeg"
+
 const Header = () => {
     const navigate = useNavigate();
     const handleExplore = () => {

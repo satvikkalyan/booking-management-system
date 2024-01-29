@@ -1,3 +1,14 @@
+.confirmation-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.confirmation-QR{
+  background-color: var(--secondary-color);
+  width: 50%;
+}
+
 table, th, td {
   height: 50px;  
 }
